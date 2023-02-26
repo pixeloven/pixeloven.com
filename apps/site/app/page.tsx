@@ -1,7 +1,12 @@
-import { CloudArrowUpIcon, ChevronRightIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import {
+  CloudArrowUpIcon,
+  ChevronRightIcon,
+  LockClosedIcon,
+  ServerIcon,
+} from "@heroicons/react/20/solid";
 
-import Footer from 'ui/Footer'
-import Navigation from 'ui/Navigation'
+import Footer from "ui/Footer";
+import Navigation from "ui/Navigation";
 
 function Hero() {
   return (
@@ -23,7 +28,10 @@ function Hero() {
                     </span>
                     <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
                       <span>Just shipped v0.1.0</span>
-                      <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                      <ChevronRightIcon
+                        className="h-5 w-5 text-gray-400"
+                        aria-hidden="true"
+                      />
                     </span>
                   </a>
                 </div>
@@ -31,8 +39,9 @@ function Hero() {
                   Supercharge your web applications
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                  amet fugiat veniam occaecat fugiat aliqua.
+                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
+                  qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
+                  occaecat fugiat aliqua.
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <a
@@ -41,7 +50,10 @@ function Hero() {
                   >
                     Documentation
                   </a>
-                  <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                  <a
+                    href="#"
+                    className="text-sm font-semibold leading-6 text-gray-900"
+                  >
                     View on GitHub <span aria-hidden="true">→</span>
                   </a>
                 </div>
@@ -67,10 +79,14 @@ function Hero() {
                           <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 py-2 px-4 text-white">
                             NotificationSetting.jsx
                           </div>
-                          <div className="border-r border-gray-600/10 py-2 px-4">App.jsx</div>
+                          <div className="border-r border-gray-600/10 py-2 px-4">
+                            App.jsx
+                          </div>
                         </div>
                       </div>
-                      <div className="px-6 pt-6 pb-14">{/* Your code example */}</div>
+                      <div className="px-6 pt-6 pb-14">
+                        {/* Your code example */}
+                      </div>
                     </div>
                   </div>
                   <div
@@ -85,27 +101,29 @@ function Hero() {
         <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />
       </div>
     </div>
-  )
+  );
 }
 
 const features = [
   {
-    name: 'Push to deploy.',
+    name: "Push to deploy.",
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
     icon: CloudArrowUpIcon,
   },
   {
-    name: 'SSL certificates.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
+    name: "SSL certificates.",
+    description:
+      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
     icon: LockClosedIcon,
   },
   {
-    name: 'Database backups.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    name: "Database backups.",
+    description:
+      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
     icon: ServerIcon,
   },
-]
+];
 
 function Feature() {
   return (
@@ -114,19 +132,27 @@ function Feature() {
         <div className="grid grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
           <div className="px-6 md:px-0 lg:pt-4 lg:pr-4">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-              <h2 className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">A better workflow</p>
+              <h2 className="text-base font-semibold leading-7 text-indigo-600">
+                Deploy faster
+              </h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                A better workflow
+              </p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
-                iste dolor cupiditate blanditiis ratione.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Maiores impedit perferendis suscipit eaque, iste dolor
+                cupiditate blanditiis ratione.
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-9">
                     <dt className="inline font-semibold text-gray-900">
-                      <feature.icon className="absolute top-1 left-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
+                      <feature.icon
+                        className="absolute top-1 left-1 h-5 w-5 text-indigo-600"
+                        aria-hidden="true"
+                      />
                       {feature.name}
-                    </dt>{' '}
+                    </dt>{" "}
                     <dd className="inline">{feature.description}</dd>
                   </div>
                 ))}
@@ -146,10 +172,14 @@ function Feature() {
                       <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 py-2 px-4 text-white">
                         NotificationSetting.jsx
                       </div>
-                      <div className="border-r border-gray-600/10 py-2 px-4">App.jsx</div>
+                      <div className="border-r border-gray-600/10 py-2 px-4">
+                        App.jsx
+                      </div>
                     </div>
                   </div>
-                  <div className="px-6 pt-6 pb-14">{/* Your code example */}</div>
+                  <div className="px-6 pt-6 pb-14">
+                    {/* Your code example */}
+                  </div>
                 </div>
               </div>
               <div
@@ -161,60 +191,37 @@ function Feature() {
         </div>
       </div>
     </div>
-  )
-}
-
-
-const footerNavigation = {
-  solutions: [
-    { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Commerce', href: '#' },
-    { name: 'Insights', href: '#' },
-  ],
-  support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
-  ],
-  company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
-  ],
-  legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
-  ],
+  );
 }
 
 function Header() {
   return (
     <div className="bg-white py-24 px-6 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
-        <p className="text-base font-semibold leading-7 text-indigo-600">Get the help you need</p>
-        <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Support center</h2>
+        <p className="text-base font-semibold leading-7 text-indigo-600">
+          Get the help you need
+        </p>
+        <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          Support center
+        </h2>
         <p className="mt-6 text-lg leading-8 text-gray-600">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-          fugiat veniam occaecat fugiat aliqua.
+          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
+          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
+          aliqua.
         </p>
       </div>
     </div>
-  )
+  );
 }
 
 export default function Home() {
   return (
     <>
-    <Navigation />
-    <Hero />
-    <Header />
-    <Feature />
-    <Footer />
-   </>
-  )
+      <Navigation />
+      <Hero />
+      <Header />
+      <Feature />
+      <Footer />
+    </>
+  );
 }

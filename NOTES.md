@@ -3,18 +3,24 @@
 ### Buisness
 
 ### Next.js
-- Configure custom global 404/error handling 
+
+- Configure custom global 404/error handling
+
 ### Tailwind
+
 - Add Font family
 
 ### Design
+
 - Color pallate
 - Logo design (not just PO)
 - Light and Dark modes
 
 ### Site Construction
+
 - https://vercel.com/templates/next.js/blog-starter-kit (simple)
 - https://dribbble.com/shots/14532125-Personal-Website
+
 ```
 Site
 - Home
@@ -29,7 +35,7 @@ Site
     - Sites (Build personal sites off framework -- get professional design help?)
     - *Games
 - Services (Solutions)
-    - Freelance 
+    - Freelance
         - Application prototyping / architect & design
         - Consultation
     - contact section
@@ -43,7 +49,7 @@ App
 - Destiny manager like the ones I use?
 
 Skyrim
-- AVO 
+- AVO
 - Plus my own mods
 
 ```
