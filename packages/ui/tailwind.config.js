@@ -10,6 +10,3 @@ const tailwindConfig = {
 };
 
 module.exports = tailwindConfig;
-
-// https://tailwindcss.com/docs/guides/nextjs
-// https://shubhamverma.me/blog/setup-tailwind-css-with-turborepo

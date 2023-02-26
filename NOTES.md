@@ -33,7 +33,6 @@ Skyrim
 
 ```
 
-
 Free
 - Doc site https://vercel.com/templates/next.js/documentation-starter-kit
 - Saas: 
@@ -52,3 +51,5 @@ Free
 
 # Install Tailwind CSS
 - Add Font family
+- Create a simple starter site
+- Use the markdown blog above + some components to 
