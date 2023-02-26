@@ -1,6 +1,6 @@
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 
-export default function Example() {
+export default function Home() {
   return (
     <div className="bg-white">
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
