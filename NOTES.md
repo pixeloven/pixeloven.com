@@ -49,3 +49,6 @@ Free
     - https://vercel.com/templates/next.js/nextjs-portfolio
 - Random
     - Link in bio: https://vercel.com/templates/nuxt/onelink (maybe for some sharing feature?)
+
+# Install Tailwind CSS
+- Add Font family
