@@ -10,6 +10,7 @@
 ### Design
 - Color pallate
 - Logo design (not just PO)
+- Light and Dark modes
 
 ### Site Construction
 - https://vercel.com/templates/next.js/blog-starter-kit (simple)
@@ -17,7 +18,7 @@
 ```
 Site
 - Home
-    - Hero: Who we are Brand -> About? Services?
+    - Hero: Who we are Brand -> About? Stylized picture of us or Logo?
     - Description: What we do -> Projects
 - About
     - me
@@ -27,7 +28,7 @@ Site
     - Apps
     - Sites (Build personal sites off framework -- get professional design help?)
     - *Games
-- Services
+- Services (Solutions)
     - Freelance 
         - Application prototyping / architect & design
         - Consultation
