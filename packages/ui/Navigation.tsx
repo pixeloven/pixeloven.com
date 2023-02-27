@@ -35,6 +35,12 @@ export default function Navigation() {
         <div className="hidden lg:flex lg:gap-x-12">
           <Link
             className="text-sm font-semibold leading-6 text-gray-900"
+            href="/"
+          >
+            Intro
+          </Link>
+          <Link
+            className="text-sm font-semibold leading-6 text-gray-900"
             href="/about"
           >
             About
@@ -76,6 +82,12 @@ export default function Navigation() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+                <Link
+                  className="text-sm font-semibold leading-6 text-gray-900"
+                  href="/"
+                >
+                  Intro
+                </Link>
                 <Link
                   className="text-sm font-semibold leading-6 text-gray-900"
                   href="/about"

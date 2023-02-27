@@ -5,6 +5,8 @@ import {
   ServerIcon,
 } from "@heroicons/react/20/solid";
 
+import ContactForm from "ui/ContactForm";
+
 function Hero() {
   return (
     <div className="bg-white">
@@ -217,6 +219,7 @@ export default function Home() {
       <Hero />
       <Header />
       <Feature />
+      <ContactForm />
     </>
   );
 }

@@ -27,13 +27,13 @@
 - https://dribbble.com/shots/14532125-Personal-Website
 
 ```
+# Make it a single
 Site
-- Home
-    - Hero: Who we are Brand -> About? Stylized picture of us or Logo?
-    - Description: What we do -> Projects
-- About
-    - me
-    - alain
+- Intro
+    - Hero: Who we are Brand -> Stylized picture of us or our log
+    - Header: Mission Statement?
+    - Feature: Project real -> link to all projects
+    - CTA: Services
 - Projects
     - Kiln (Framework)
     - Apps
@@ -43,7 +43,7 @@ Site
     - Freelance
         - Application prototyping / architect & design
         - Consultation
-    - contact section
+    - Contact section
 
 Account?
     - Basic profile
