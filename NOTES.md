@@ -1,6 +1,10 @@
 ## Follow Ups
 
-### Buisness
+### CI/CD
+- Husky
+- Github actions
+- Static generation
+- Deploy to github pages
 
 ### Next.js
 
@@ -53,3 +57,8 @@ Skyrim
 - Plus my own mods
 
 ```
+
+
+### Revenue
+- CTA learn more about us
+- Blog ads that promote tooling. Ads should feel very purposeful. Perhaps even custom built Affiliate. Only on blog and only for products/services/apps I believe in.
