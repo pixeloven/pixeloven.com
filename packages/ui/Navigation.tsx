@@ -35,18 +35,6 @@ export default function Navigation() {
         <div className="hidden lg:flex lg:gap-x-12">
           <Link
             className="text-sm font-semibold leading-6 text-gray-900"
-            href="/services"
-          >
-            Services
-          </Link>
-          <Link
-            className="text-sm font-semibold leading-6 text-gray-900"
-            href="/work"
-          >
-            Work
-          </Link>
-          <Link
-            className="text-sm font-semibold leading-6 text-gray-900"
             href="/about"
           >
             About
@@ -56,12 +44,6 @@ export default function Navigation() {
             href="/blog"
           >
             Blog
-          </Link>
-          <Link
-            className="text-sm font-semibold leading-6 text-gray-900"
-            href="/contact"
-          >
-            Contact
           </Link>
         </div>
       </nav>
@@ -96,18 +78,6 @@ export default function Navigation() {
               <div className="space-y-2 py-6">
                 <Link
                   className="text-sm font-semibold leading-6 text-gray-900"
-                  href="/services"
-                >
-                  Services
-                </Link>
-                <Link
-                  className="text-sm font-semibold leading-6 text-gray-900"
-                  href="/work"
-                >
-                  Work
-                </Link>
-                <Link
-                  className="text-sm font-semibold leading-6 text-gray-900"
                   href="/about"
                 >
                   About
@@ -117,12 +87,6 @@ export default function Navigation() {
                   href="/blog"
                 >
                   Blog
-                </Link>
-                <Link
-                  className="text-sm font-semibold leading-6 text-gray-900"
-                  href="/contact"
-                >
-                  Contact
                 </Link>
               </div>
             </div>

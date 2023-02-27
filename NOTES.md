@@ -45,6 +45,10 @@ Site
         - Consultation
     - contact section
 
+Account?
+    - Basic profile
+    - Billing
+
 Blog
 - Experiances
     - Flashbacks: CS Degree, Palomar, In a Time before (Retail, messign with computers on the flour)
