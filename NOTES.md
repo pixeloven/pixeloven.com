@@ -1,6 +1,7 @@
 ## Follow Ups
 
 ### CI/CD
+
 - Husky
 - Github actions
 - Static generation
@@ -45,7 +46,11 @@ Site
     - contact section
 
 Blog
-- Experiances as a EM
+- Experiances
+    - Flashbacks: CS Degree, Palomar, In a Time before (Retail, messign with computers on the flour)
+    - As an EM
+    - As an IC
+    - Decision to go IC again
 - Learnings as an eng
 
 App
@@ -58,7 +63,7 @@ Skyrim
 
 ```
 
-
 ### Revenue
+
 - CTA learn more about us
 - Blog ads that promote tooling. Ads should feel very purposeful. Perhaps even custom built Affiliate. Only on blog and only for products/services/apps I believe in.
