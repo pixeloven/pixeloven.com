@@ -1,5 +1,9 @@
 ## Follow Ups
 
+Inter Font
+- Fontbrite support for typeogrphy
+- Tailwind CSS? 
+
 ### CI/CD
 
 - Husky
