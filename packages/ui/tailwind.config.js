@@ -3,6 +3,7 @@ const { join } = require('path');
 /** @type {import('tailwindcss').Config} */
 const tailwindConfig = {
     content: [
+        join(__dirname, "../../node_modules/flowbite-react/**/*.js"),
         join(__dirname, "./**/*.{js,ts,jsx,tsx}"),
         "./**/*.{js,ts,jsx,tsx}",
     ],
@@ -10,7 +11,8 @@ const tailwindConfig = {
         extend: {},
     },
     plugins: [
-        require('@tailwindcss/forms')
+        // require('@tailwindcss/forms'),
+        require('flowbite/plugin')
     ],
 };
 

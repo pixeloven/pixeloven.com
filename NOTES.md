@@ -1,5 +1,9 @@
 ## Follow Ups
 
+Inter Font
+- Fontbrite support for typeogrphy
+- Tailwind CSS? 
+
 ### CI/CD
 
 - Husky
@@ -21,10 +25,15 @@
 - Logo design (not just PO)
 - Light and Dark modes
 
+Personal Site
+- https://dribbble.com/shots/14532125-Personal-Website 
+
+PixelOven
+- https://vercel.com/
+
 ### Site Construction
 
 - https://vercel.com/templates/next.js/blog-starter-kit (simple)
-- https://dribbble.com/shots/14532125-Personal-Website
 
 ```
 # Make it a single
@@ -32,10 +41,14 @@ Site
 - Intro
     - Hero: Who we are Brand -> Stylized picture of us or our log
     - Header: Mission Statement?
-    - Feature: Project real -> link to all projects
+    - Feature 1 (Work): Project real (Just kiln for now)
+    - Feature 2 (Services): Project real (Just kiln for now)
     - CTA: Services
+    - Contact Us
+
+
 - Projects
-    - Kiln (Framework)
+    - Kiln (Framework) - Needs it's own landing page and document site
     - Apps
     - Sites (Build personal sites off framework -- get professional design help?)
     - *Games
@@ -44,11 +57,9 @@ Site
         - Application prototyping / architect & design
         - Consultation
     - Contact section
-
 Account?
     - Basic profile
     - Billing
-
 Blog
 - Experiances
     - Flashbacks: CS Degree, Palomar, In a Time before (Retail, messign with computers on the flour)
