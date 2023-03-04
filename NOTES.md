@@ -1,3 +1,16 @@
+
+# Saas and support
+## Syntax (Docs)
+- Use MDX instead?
+### Changelog 
+https://vercel.com/templates/nuxt/logspot
+Make something like this?
+
+## Blog
+https://vercel.com/templates/next.js/tailwind-css-starter-blog
+- https://vercel.com/templates/next.js/blog-starter-kit (simple)
+
+
 ## Follow Ups
 
 ### CI/CD
