@@ -3,9 +3,9 @@ import {
   ChevronRightIcon,
   LockClosedIcon,
   ServerIcon,
-} from "@heroicons/react/20/solid";
+} from '@heroicons/react/20/solid'
 
-import ContactForm from "ui/ContactForm";
+import ContactForm from 'ui/ContactForm'
 
 function Hero() {
   return (
@@ -100,29 +100,29 @@ function Hero() {
         <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />
       </div>
     </div>
-  );
+  )
 }
 
 const features = [
   {
-    name: "Push to deploy.",
+    name: 'Push to deploy.',
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: CloudArrowUpIcon,
   },
   {
-    name: "SSL certificates.",
+    name: 'SSL certificates.',
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+      'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
     icon: LockClosedIcon,
   },
   {
-    name: "Database backups.",
+    name: 'Database backups.',
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
     icon: ServerIcon,
   },
-];
+]
 
 function Feature() {
   return (
@@ -151,7 +151,7 @@ function Feature() {
                         aria-hidden="true"
                       />
                       {feature.name}
-                    </dt>{" "}
+                    </dt>{' '}
                     <dd className="inline">{feature.description}</dd>
                   </div>
                 ))}
@@ -190,7 +190,7 @@ function Feature() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 function Header() {
@@ -210,7 +210,7 @@ function Header() {
         </p>
       </div>
     </div>
-  );
+  )
 }
 
 export default function Home() {
@@ -221,5 +221,5 @@ export default function Home() {
       <Feature />
       <ContactForm />
     </>
-  );
+  )
 }

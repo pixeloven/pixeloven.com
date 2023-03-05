@@ -7,9 +7,7 @@ import backgroundImage from './images/background-auth.jpg'
 type AuthLayoutProps = {}
 
 export function AuthLayout(props: PropsWithChildren<AuthLayoutProps>) {
-  const {
-    children
-  } = props;
+  const { children } = props
   return (
     <>
       <div className="relative flex min-h-full justify-center md:px-12 lg:px-0">

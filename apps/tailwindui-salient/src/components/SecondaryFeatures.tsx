@@ -9,18 +9,18 @@ import screenshotInventory from './images/screenshots/inventory.png'
 import screenshotProfitLoss from './images/screenshots/profit-loss.png'
 
 interface Feature {
-  name: ReactNode | string;
-  summary: string;
-  description: string;
-  image: StaticImageData;
-  icon: Function;
-  isActive?: boolean;
+  name: ReactNode | string
+  summary: string
+  description: string
+  image: StaticImageData
+  icon: Function
+  isActive?: boolean
 }
 
 interface FeatureProps {
-  className?: string;
-  feature: Feature;
-  isActive?: boolean;
+  className?: string
+  feature: Feature
+  isActive?: boolean
 }
 
 const features: Feature[] = [
@@ -112,7 +112,7 @@ const features: Feature[] = [
 ]
 
 function Feature(props: FeatureProps) {
-  const { feature, isActive, className} = props;
+  const { feature, isActive, className } = props
   return (
     <div
       className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')}
@@ -136,7 +136,7 @@ function Feature(props: FeatureProps) {
       >
         {feature.name}
       </h3>
-      <p className="mt-2 font-display text-xl text-slate-900">
+      <p className="font-display mt-2 text-xl text-slate-900">
         {feature.summary}
       </p>
       <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
@@ -190,7 +190,7 @@ function FeaturesDesktop() {
               />
             ))}
           </Tab.List>
-          <Tab.Panels className="relative mt-20 overflow-hidden rounded-4xl bg-slate-200 px-14 py-16 xl:px-16">
+          <Tab.Panels className="rounded-4xl relative mt-20 overflow-hidden bg-slate-200 px-14 py-16 xl:px-16">
             <div className="-mx-5 flex">
               {features.map((feature, featureIndex) => (
                 <Tab.Panel
@@ -214,7 +214,7 @@ function FeaturesDesktop() {
                 </Tab.Panel>
               ))}
             </div>
-            <div className="pointer-events-none absolute inset-0 rounded-4xl ring-1 ring-inset ring-slate-900/10" />
+            <div className="rounded-4xl pointer-events-none absolute inset-0 ring-1 ring-inset ring-slate-900/10" />
           </Tab.Panels>
         </>
       )}

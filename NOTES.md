@@ -1,15 +1,19 @@
-
 # Saas and support
+
 ## Syntax (Docs)
+
 - Use MDX instead?
-### Changelog 
+
+### Changelog
+
 https://vercel.com/templates/nuxt/logspot
 Make something like this?
 
 ## Blog
-https://vercel.com/templates/next.js/tailwind-css-starter-blog
-- https://vercel.com/templates/next.js/blog-starter-kit (simple)
 
+https://vercel.com/templates/next.js/tailwind-css-starter-blog
+
+- https://vercel.com/templates/next.js/blog-starter-kit (simple)
 
 ## Follow Ups
 
@@ -35,9 +39,11 @@ https://vercel.com/templates/next.js/tailwind-css-starter-blog
 - Light and Dark modes
 
 Personal Site
-- https://dribbble.com/shots/14532125-Personal-Website 
+
+- https://dribbble.com/shots/14532125-Personal-Website
 
 PixelOven
+
 - https://vercel.com/
 
 ### Site Construction

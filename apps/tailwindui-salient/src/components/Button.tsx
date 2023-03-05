@@ -4,12 +4,12 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 interface BaseStyles {
-  [key:string]: string
+  [key: string]: string
 }
 
 interface VariantStyles {
-  [key:string]: {
-    [key:string]: string
+  [key: string]: {
+    [key: string]: string
   }
 }
 
@@ -43,14 +43,9 @@ const variantStyles: VariantStyles = {
 }
 
 export function Button(props: PropsWithChildren<ButtonProps>) {
-  const {
-    variant,
-    color,
-    className,
-    href
-  } = props;
+  const { variant, color, className, href } = props
   const mergedClassName = clsx(
-    variant ? baseStyles[variant]: '',
+    variant ? baseStyles[variant] : '',
     variant && color ? variantStyles[variant][color] : '',
     className
   )

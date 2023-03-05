@@ -11,11 +11,11 @@ import { NavLink } from './NavLink'
 import type { PropsWithChildren } from 'react'
 
 interface MobileNavLinkProps {
-  href: string;
+  href: string
 }
 
 function MobileNavLink(props: PropsWithChildren<MobileNavLinkProps>) {
-  const { href, children } = props;
+  const { href, children } = props
   return (
     <Popover.Button as={Link} href={href} className="block w-full p-2">
       {children}
@@ -24,11 +24,11 @@ function MobileNavLink(props: PropsWithChildren<MobileNavLinkProps>) {
 }
 
 interface MobileNavIconProps {
-  open?: boolean;
+  open?: boolean
 }
 
 function MobileNavIcon(props: MobileNavIconProps) {
-  const { open } = props;
+  const { open } = props
   return (
     <svg
       aria-hidden="true"

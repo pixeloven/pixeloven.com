@@ -7,7 +7,7 @@ function GitHubIcon(props: any) {
         clipRule="evenodd"
       />
     </svg>
-  );
+  )
 }
 
 export default function Footer() {
@@ -27,5 +27,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

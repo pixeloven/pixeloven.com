@@ -1,8 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
 
-import type { 
-  SVGAttributes
-} from 'react'
+import type { SVGAttributes } from 'react'
 
 import { Container } from './Container'
 import avatarImage1 from './images/avatars/avatar-1.png'
@@ -12,14 +10,14 @@ import avatarImage4 from './images/avatars/avatar-4.png'
 import avatarImage5 from './images/avatars/avatar-5.png'
 
 interface Author {
-  name: string;
-  role: string;
-  image: StaticImageData;
+  name: string
+  role: string
+  image: StaticImageData
 }
 
 interface Testimonial {
-  content: string;
-  author: Author;
+  content: string
+  author: Author
 }
 
 const testimonials: Testimonial[][] = [

@@ -5,12 +5,10 @@ import { Container } from './Container'
 
 import type { ReactNode } from 'react'
 
-type PropsWithClassName<P = unknown> = P & { className?: string };
+type PropsWithClassName<P = unknown> = P & { className?: string }
 
 function SwirlyDoodle(props: PropsWithClassName<{}>) {
-  const {
-    className
-  } = props;
+  const { className } = props
   return (
     <svg
       aria-hidden="true"
@@ -28,9 +26,7 @@ function SwirlyDoodle(props: PropsWithClassName<{}>) {
 }
 
 function CheckIcon(props: PropsWithClassName<{}>) {
-  const {
-    className
-  } = props;
+  const { className } = props
   return (
     <svg
       aria-hidden="true"
@@ -57,23 +53,16 @@ function CheckIcon(props: PropsWithClassName<{}>) {
 }
 
 interface PlanProps {
-  name: string;
-  price: string;
-  description: string;
-  href: string;
-  features: string[];
-  featured?: boolean;
+  name: string
+  price: string
+  description: string
+  href: string
+  features: string[]
+  featured?: boolean
 }
 
 function Plan(props: PlanProps) {
-  const { 
-    name, 
-    price, 
-    description, 
-    href, 
-    features,
-    featured = false 
-  } = props;
+  const { name, price, description, href, features, featured = false } = props
   return (
     <section
       className={clsx(
@@ -81,7 +70,7 @@ function Plan(props: PlanProps) {
         featured ? 'order-first bg-blue-600 py-8 lg:order-none' : 'lg:py-8'
       )}
     >
-      <h3 className="mt-5 font-display text-lg text-white">{name}</h3>
+      <h3 className="font-display mt-5 text-lg text-white">{name}</h3>
       <p
         className={clsx(
           'mt-2 text-base',
@@ -90,7 +79,7 @@ function Plan(props: PlanProps) {
       >
         {description}
       </p>
-      <p className="order-first font-display text-5xl font-light tracking-tight text-white">
+      <p className="font-display order-first text-5xl font-light tracking-tight text-white">
         {price}
       </p>
       <ul

@@ -1,6 +1,4 @@
-import type { 
-  SVGAttributes
-} from 'react'
+import type { SVGAttributes } from 'react'
 
 export function Logo(props: SVGAttributes<SVGElement>) {
   return (

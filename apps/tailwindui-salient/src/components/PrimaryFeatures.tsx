@@ -43,10 +43,8 @@ export function PrimaryFeatures() {
   useEffect(() => {
     let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
 
-    function onMediaQueryChange(media:  MediaQueryList | MediaQueryListEvent) {
-      const {
-        matches
-      } = media;
+    function onMediaQueryChange(media: MediaQueryList | MediaQueryListEvent) {
+      const { matches } = media
       setTabOrientation(matches ? 'vertical' : 'horizontal')
     }
 
