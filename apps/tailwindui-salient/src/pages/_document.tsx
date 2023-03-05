@@ -1,5 +1,5 @@
-import { Head, Html, Main, NextScript } from 'next/document'
-import type { DocumentProps } from 'next/document'
+import { Head, Html, Main, NextScript } from "next/document";
+import type { DocumentProps } from "next/document";
 
 export default function Document(props: DocumentProps) {
   return (
@@ -24,5 +24,5 @@ export default function Document(props: DocumentProps) {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }

@@ -1,34 +1,34 @@
-import { Fragment } from 'react'
-import Link from 'next/link'
-import { Popover, Transition } from '@headlessui/react'
-import clsx from 'clsx'
+import { Fragment } from "react";
+import Link from "next/link";
+import { Popover, Transition } from "@headlessui/react";
+import clsx from "clsx";
 
-import { Button } from './Button'
-import { Container } from './Container'
-import { Logo } from './Logo'
-import { NavLink } from './NavLink'
+import { Button } from "./Button";
+import { Container } from "./Container";
+import { Logo } from "./Logo";
+import { NavLink } from "./NavLink";
 
-import type { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from "react";
 
 interface MobileNavLinkProps {
-  href: string
+  href: string;
 }
 
 function MobileNavLink(props: PropsWithChildren<MobileNavLinkProps>) {
-  const { href, children } = props
+  const { href, children } = props;
   return (
     <Popover.Button as={Link} href={href} className="block w-full p-2">
       {children}
     </Popover.Button>
-  )
+  );
 }
 
 interface MobileNavIconProps {
-  open?: boolean
+  open?: boolean;
 }
 
 function MobileNavIcon(props: MobileNavIconProps) {
-  const { open } = props
+  const { open } = props;
   return (
     <svg
       aria-hidden="true"
@@ -40,19 +40,19 @@ function MobileNavIcon(props: MobileNavIconProps) {
       <path
         d="M0 1H14M0 7H14M0 13H14"
         className={clsx(
-          'origin-center transition',
-          open && 'scale-90 opacity-0'
+          "origin-center transition",
+          open && "scale-90 opacity-0"
         )}
       />
       <path
         d="M2 2L12 12M12 2L2 12"
         className={clsx(
-          'origin-center transition',
-          !open && 'scale-90 opacity-0'
+          "origin-center transition",
+          !open && "scale-90 opacity-0"
         )}
       />
     </svg>
-  )
+  );
 }
 
 function MobileNavigation() {
@@ -98,7 +98,7 @@ function MobileNavigation() {
         </Transition.Child>
       </Transition.Root>
     </Popover>
-  )
+  );
 }
 
 export function Header() {
@@ -132,5 +132,5 @@ export function Header() {
         </nav>
       </Container>
     </header>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-import type { SVGAttributes } from 'react'
+import type { SVGAttributes } from "react";
 
 export function Logo(props: SVGAttributes<SVGElement>) {
   return (
-    <svg aria-hidden="true" viewBox="0 0 109 40" {...props}>
+    <svg {...props} aria-hidden="true" viewBox="0 0 109 40">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -30,5 +30,5 @@ export function Logo(props: SVGAttributes<SVGElement>) {
         fill="#0F172A"
       />
     </svg>
-  )
+  );
 }

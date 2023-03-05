@@ -1,15 +1,15 @@
-import clsx from 'clsx'
+import clsx from "clsx";
 
-import type { PropsWithChildren, HTMLAttributes } from 'react'
+import type { PropsWithChildren, HTMLAttributes } from "react";
 
-type ButtonProps = HTMLAttributes<HTMLElement>
+type ButtonProps = HTMLAttributes<HTMLElement>;
 
 export function Container(props: PropsWithChildren<ButtonProps>) {
-  const { className } = props
+  const { className } = props;
   return (
     <div
-      className={clsx('mx-auto max-w-7xl px-4 sm:px-6 lg:px-8', className)}
       {...props}
+      className={clsx("mx-auto max-w-7xl px-4 sm:px-6 lg:px-8", className)}
     />
-  )
+  );
 }

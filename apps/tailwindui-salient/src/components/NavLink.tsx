@@ -1,10 +1,10 @@
-import Link from 'next/link'
-import type { LinkProps } from 'next/link'
+import Link from "next/link";
+import type { LinkProps } from "next/link";
 
-import type { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from "react";
 
 export function NavLink(props: PropsWithChildren<LinkProps>) {
-  const { href, children } = props
+  const { href, children } = props;
   return (
     <Link
       href={href}
@@ -12,5 +12,5 @@ export function NavLink(props: PropsWithChildren<LinkProps>) {
     >
       {children}
     </Link>
-  )
+  );
 }

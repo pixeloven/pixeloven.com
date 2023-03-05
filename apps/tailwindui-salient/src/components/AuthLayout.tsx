@@ -1,13 +1,13 @@
-import type { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from "react";
 
-import Image from 'next/image'
+import Image from "next/image";
 
-import backgroundImage from './images/background-auth.jpg'
+import backgroundImage from "../images/background-auth.jpg";
 
-type AuthLayoutProps = {}
+type AuthLayoutProps = {};
 
 export function AuthLayout(props: PropsWithChildren<AuthLayoutProps>) {
-  const { children } = props
+  const { children } = props;
   return (
     <>
       <div className="relative flex min-h-full justify-center md:px-12 lg:px-0">
@@ -26,5 +26,5 @@ export function AuthLayout(props: PropsWithChildren<AuthLayoutProps>) {
         </div>
       </div>
     </>
-  )
+  );
 }

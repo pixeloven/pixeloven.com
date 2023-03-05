@@ -1,7 +1,7 @@
 import {
   CheckCircleIcon,
   InformationCircleIcon,
-} from '@heroicons/react/20/solid'
+} from "@heroicons/react/20/solid";
 
 export default function Post() {
   return (
@@ -37,7 +37,7 @@ export default function Post() {
               <span>
                 <strong className="font-semibold text-gray-900">
                   Data types.
-                </strong>{' '}
+                </strong>{" "}
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Maiores impedit perferendis suscipit eaque, iste dolor
                 cupiditate blanditiis ratione.
@@ -49,7 +49,7 @@ export default function Post() {
                 aria-hidden="true"
               />
               <span>
-                <strong className="font-semibold text-gray-900">Loops.</strong>{' '}
+                <strong className="font-semibold text-gray-900">Loops.</strong>{" "}
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
                 lorem cupidatat commodo.
               </span>
@@ -60,7 +60,7 @@ export default function Post() {
                 aria-hidden="true"
               />
               <span>
-                <strong className="font-semibold text-gray-900">Events.</strong>{' '}
+                <strong className="font-semibold text-gray-900">Events.</strong>{" "}
                 Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.
                 Et magna sit morbi lobortis.
               </span>
@@ -102,7 +102,7 @@ export default function Post() {
               <div className="text-sm leading-6">
                 <strong className="font-semibold text-gray-900">
                   Maria Hill
-                </strong>{' '}
+                </strong>{" "}
                 – Marketing Manager
               </div>
             </figcaption>
@@ -149,5 +149,5 @@ export default function Post() {
         </div>
       </div>
     </div>
-  )
+  );
 }

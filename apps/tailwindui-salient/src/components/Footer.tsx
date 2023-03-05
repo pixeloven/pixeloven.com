@@ -1,8 +1,8 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import { Container } from './Container'
-import { Logo } from './Logo'
-import { NavLink } from './NavLink'
+import { Container } from "./Container";
+import { Logo } from "./Logo";
+import { NavLink } from "./NavLink";
 
 export function Footer() {
   return (
@@ -52,5 +52,5 @@ export function Footer() {
         </div>
       </Container>
     </footer>
-  )
+  );
 }
