@@ -1,9 +1,16 @@
 import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
+import { Button } from './Button'
+import { Container } from './Container'
 
-function SwirlyDoodle({ className }) {
+import type { ReactNode } from 'react'
+
+type PropsWithClassName<P = unknown> = P & { className?: string };
+
+function SwirlyDoodle(props: PropsWithClassName<{}>) {
+  const {
+    className
+  } = props;
   return (
     <svg
       aria-hidden="true"
@@ -20,7 +27,10 @@ function SwirlyDoodle({ className }) {
   )
 }
 
-function CheckIcon({ className }) {
+function CheckIcon(props: PropsWithClassName<{}>) {
+  const {
+    className
+  } = props;
   return (
     <svg
       aria-hidden="true"
@@ -46,7 +56,24 @@ function CheckIcon({ className }) {
   )
 }
 
-function Plan({ name, price, description, href, features, featured = false }) {
+interface PlanProps {
+  name: string;
+  price: string;
+  description: string;
+  href: string;
+  features: string[];
+  featured?: boolean;
+}
+
+function Plan(props: PlanProps) {
+  const { 
+    name, 
+    price, 
+    description, 
+    href, 
+    features,
+    featured = false 
+  } = props;
   return (
     <section
       className={clsx(

@@ -15,7 +15,7 @@ interface VariantStyles {
 
 // HTMLButtonElement and Anchor
 interface ButtonProps extends ButtonHTMLAttributes<HTMLElement> {
-  variant: string
+  variant?: string
   href?: string
 }
 
@@ -42,24 +42,22 @@ const variantStyles: VariantStyles = {
   },
 }
 
-
-
 export function Button(props: PropsWithChildren<ButtonProps>) {
   const {
     variant,
-    color = "white",
+    color,
     className,
     href
   } = props;
   const mergedClassName = clsx(
-    baseStyles[variant],
-    variantStyles[variant][color],
+    variant ? baseStyles[variant]: '',
+    variant && color ? variantStyles[variant][color] : '',
     className
   )
 
   return href ? (
-    <Link href={href} className={className} {...props} />
+    <Link href={href} className={mergedClassName} {...props} />
   ) : (
-    <button className={className} {...props} />
+    <button className={mergedClassName} {...props} />
   )
 }

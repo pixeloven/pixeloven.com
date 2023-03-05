@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { AuthLayout } from '@/components/AuthLayout'
-import { Button } from '@/components/Button'
-import { SelectField, TextField } from '@/components/Fields'
-import { Logo } from '@/components/Logo'
+import { AuthLayout } from './AuthLayout'
+import { Button } from './Button'
+import { SelectField, TextField } from './Fields'
+import { Logo } from './Logo'
 
 export default function Register() {
   return (

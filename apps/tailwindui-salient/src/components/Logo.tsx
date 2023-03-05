@@ -1,4 +1,8 @@
-export function Logo(props) {
+import type { 
+  SVGAttributes
+} from 'react'
+
+export function Logo(props: SVGAttributes<SVGElement>) {
   return (
     <svg aria-hidden="true" viewBox="0 0 109 40" {...props}>
       <path

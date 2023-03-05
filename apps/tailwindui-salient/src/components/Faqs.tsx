@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
-import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-faqs.jpg'
+import { Container } from './Container'
+import backgroundImage from './images/background-faqs.jpg'
 
 const faqs = [
   [
@@ -81,8 +81,8 @@ export function Faqs() {
             Frequently asked questions
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+            If you can&apros;t find what you&apros;re looking for, email our support team
+            and if you&apros;re lucky someone will get back to you.
           </p>
         </div>
         <ul

@@ -3,12 +3,19 @@ import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
-import { NavLink } from '@/components/NavLink'
+import { Button } from './Button'
+import { Container } from './Container'
+import { Logo } from './Logo'
+import { NavLink } from './NavLink'
 
-function MobileNavLink({ href, children }) {
+import type { PropsWithChildren } from 'react'
+
+interface MobileNavLinkProps {
+  href: string;
+}
+
+function MobileNavLink(props: PropsWithChildren<MobileNavLinkProps>) {
+  const { href, children } = props;
   return (
     <Popover.Button as={Link} href={href} className="block w-full p-2">
       {children}
@@ -16,7 +23,12 @@ function MobileNavLink({ href, children }) {
   )
 }
 
-function MobileNavIcon({ open }) {
+interface MobileNavIconProps {
+  open?: boolean;
+}
+
+function MobileNavIcon(props: MobileNavIconProps) {
+  const { open } = props;
   return (
     <svg
       aria-hidden="true"

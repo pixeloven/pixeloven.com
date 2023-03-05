@@ -1,6 +1,10 @@
 import Link from 'next/link'
+import type { LinkProps } from 'next/link'
 
-export function NavLink({ href, children }) {
+import type { PropsWithChildren } from 'react'
+
+export function NavLink(props: PropsWithChildren<LinkProps>) {
+  const { href, children } = props;
   return (
     <Link
       href={href}

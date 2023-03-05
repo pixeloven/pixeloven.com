@@ -1,14 +1,29 @@
-import { useId } from 'react'
-import Image from 'next/image'
+import { ReactNode, useId } from 'react'
+import Image, { StaticImageData } from 'next/image'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Container } from '@/components/Container'
-import screenshotContacts from '@/images/screenshots/contacts.png'
-import screenshotInventory from '@/images/screenshots/inventory.png'
-import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
+import { Container } from './Container'
+import screenshotContacts from './images/screenshots/contacts.png'
+import screenshotInventory from './images/screenshots/inventory.png'
+import screenshotProfitLoss from './images/screenshots/profit-loss.png'
 
-const features = [
+interface Feature {
+  name: ReactNode | string;
+  summary: string;
+  description: string;
+  image: StaticImageData;
+  icon: Function;
+  isActive?: boolean;
+}
+
+interface FeatureProps {
+  className?: string;
+  feature: Feature;
+  isActive?: boolean;
+}
+
+const features: Feature[] = [
   {
     name: 'Reporting',
     summary: 'Stay on top of things with always up-to-date reporting features.',
@@ -96,7 +111,8 @@ const features = [
   },
 ]
 
-function Feature({ feature, isActive, className, ...props }) {
+function Feature(props: FeatureProps) {
+  const { feature, isActive, className} = props;
   return (
     <div
       className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')}
@@ -131,8 +147,8 @@ function Feature({ feature, isActive, className, ...props }) {
 function FeaturesMobile() {
   return (
     <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
-      {features.map((feature) => (
-        <div key={feature.name}>
+      {features.map((feature, featureIndex) => (
+        <div key={featureIndex}>
           <Feature feature={feature} className="mx-auto max-w-2xl" isActive />
           <div className="relative mt-10 pb-10">
             <div className="absolute -inset-x-4 bottom-0 top-8 bg-slate-200 sm:-inset-x-6" />
@@ -159,7 +175,7 @@ function FeaturesDesktop() {
           <Tab.List className="grid grid-cols-3 gap-x-8">
             {features.map((feature, featureIndex) => (
               <Feature
-                key={feature.name}
+                key={featureIndex}
                 feature={{
                   ...feature,
                   name: (
@@ -179,7 +195,7 @@ function FeaturesDesktop() {
               {features.map((feature, featureIndex) => (
                 <Tab.Panel
                   static
-                  key={feature.name}
+                  key={featureIndex}
                   className={clsx(
                     'px-5 transition duration-500 ease-in-out [&:not(:focus-visible)]:focus:outline-none',
                     featureIndex !== selectedIndex && 'opacity-60'
