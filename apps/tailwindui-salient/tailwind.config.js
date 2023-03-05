@@ -1,5 +1,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
+// @todo Convert to TS
+// @todo rename to site and delete site
+// @todo create package for prettier config
+// @todo install doc site
+// @todo install blog site
+// unify styles
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   ...require('ui/tailwind.config'),
