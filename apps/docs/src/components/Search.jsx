@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Router from 'next/router'
 import { DocSearchModal, useDocSearchKeyboardEvents } from '@docsearch/react'
 
-// @todo https://docsearch.algolia.com/docs/what-is-docsearch/
 const docSearchConfig = {
   appId: process.env.NEXT_PUBLIC_DOCSEARCH_APP_ID,
   apiKey: process.env.NEXT_PUBLIC_DOCSEARCH_API_KEY,
