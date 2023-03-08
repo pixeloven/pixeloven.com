@@ -17,6 +17,8 @@ Make something like this?
 - Use mdx instead?
 
 ## Follow Ups
+- [] Convert doc site to typescript
+- [] Upgrade blog site
 
 ### CI/CD
 
