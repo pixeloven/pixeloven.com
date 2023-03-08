@@ -1,4 +1,24 @@
+# Saas and support
+
+## Syntax (Docs)
+
+- Use MDX instead?
+- Register docsearch https://docsearch.algolia.com/docs/what-is-docsearch/
+
+### Changelog
+
+https://vercel.com/templates/nuxt/logspot
+Make something like this?
+
+## Blog
+
+- https://vercel.com/templates/next.js/tailwind-css-starter-blog
+- https://vercel.com/templates/next.js/blog-starter-kit (simple)
+- Use mdx instead?
+
 ## Follow Ups
+- [] Convert doc site to typescript
+- [] Upgrade blog site
 
 ### CI/CD
 
@@ -14,60 +34,38 @@
 ### Tailwind
 
 - Add Font family
+- Doc site has them in public folder can we use a shared resource?
 
 ### Design
+TBD
 
-- Color pallate
-- Logo design (not just PO)
-- Light and Dark modes
-
-### Site Construction
-
-- https://vercel.com/templates/next.js/blog-starter-kit (simple)
-- https://dribbble.com/shots/14532125-Personal-Website
-
-```
-# Make it a single
-Site
-- Intro
-    - Hero: Who we are Brand -> Stylized picture of us or our log
-    - Header: Mission Statement?
-    - Feature: Project real -> link to all projects
-    - CTA: Services
-- Projects
-    - Kiln (Framework)
+### Ideas
+To start keep the site focused on Kiln and our personal growth.
+- Projects (show case these)
+    - Kiln (Framework) 
+        - Doc site and Landing section to show it off
+        - Make it easy to build and deploy
+    - Sites 
+        - Build personal sites using framework
     - Apps
-    - Sites (Build personal sites off framework -- get professional design help?)
-    - *Games
+        - Destiny stats for crucible or manager app
+        - Make a game for web and native
 - Services (Solutions)
     - Freelance
         - Application prototyping / architect & design
+        - Deployment and management of Next.js Apps? Kiln?
         - Consultation
     - Contact section
-
-Account?
-    - Basic profile
-    - Billing
-
-Blog
-- Experiances
-    - Flashbacks: CS Degree, Palomar, In a Time before (Retail, messign with computers on the flour)
-    - As an EM
-    - As an IC
-    - Decision to go IC again
-- Learnings as an eng
-
-App
-- Destiny stats app for crucible
-- Destiny manager like the ones I use?
-
-Skyrim
-- AVO
-- Plus my own mods
-
-```
+    - Account
+        - Basic profile
+        - Billing
+- Blog
+    - Experiances
+        - Flashbacks: CS Degree, Palomar, In a Time before (Retail, messign with computers on the flour)
+        - As an EM
+        - As an IC
+        - Decision to go IC again
+    - Learnings as an eng
 
 ### Revenue
-
-- CTA learn more about us
 - Blog ads that promote tooling. Ads should feel very purposeful. Perhaps even custom built Affiliate. Only on blog and only for products/services/apps I believe in.
