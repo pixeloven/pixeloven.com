@@ -1,8 +1,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{js,jsx}'],
+const tailwindConfig = {
+  ...require('ui/tailwind.config'),
   darkMode: 'class',
   theme: {
     fontSize: {
@@ -30,5 +30,6 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
 }
+
+module.exports = tailwindConfig;
