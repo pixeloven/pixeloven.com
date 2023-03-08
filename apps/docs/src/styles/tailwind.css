@@ -4,3 +4,7 @@
 @import './prism.css';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+#__next {
+  min-height: 100%;
+}

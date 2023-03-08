@@ -3,7 +3,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 const tailwindConfig = {
   ...require('ui/tailwind.config'),
-  darkMode: 'class',
   theme: {
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -31,5 +30,4 @@ const tailwindConfig = {
     },
   },
 }
-
 module.exports = tailwindConfig;
