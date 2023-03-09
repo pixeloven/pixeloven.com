@@ -1,5 +1,11 @@
 # Saas and support
 
+# Either get blog updated and converted to TS on it's own... (IE FORK and update)
+    # Then introduce here?
+    # https://vercel.com/templates?type=blog&framework=next.js&css=tailwind
+
+# Or use the simpler blog
+
 ## Syntax (Docs)
 
 - Use MDX instead?
@@ -14,11 +20,25 @@ Make something like this?
 
 - https://vercel.com/templates/next.js/tailwind-css-starter-blog
 - https://vercel.com/templates/next.js/blog-starter-kit (simple)
+- https://github.com/web3templates/stablo (Leaning toward buying this one -- maybe see what else is out there that is similar)
 - Use mdx instead?
 
 ## Follow Ups
 - [] Convert doc site to typescript
-- [] Upgrade blog site
+- [] Go through all deps on blog
+- [] Upgrade blog site an deps
+- [] Install sharp across each app
+- [] Merge all the font usage and assets
+- [] Merge apps by zone? 
+- [] Make them avalible offline?
+- [] Move blog api to it's own app?
+- [] Can all three apps (minus API) be static?
+
+(See Advanced markdown blog for example)
+- [] Create new favicons for all device types???
+- [] Setup SEO for site
+- [] Add Google analytics to entire site
+- [] Can we make it so the blog and docs use the same markdown setup?
 
 ### CI/CD
 
