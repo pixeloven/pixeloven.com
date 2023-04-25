@@ -1,4 +1,6 @@
 {
+  "name": "blog",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next",
@@ -6,6 +8,7 @@
     "start": "next start",
     "typecheck": "tsc"
   },
+  "browserslist": "defaults, not ie <= 11",
   "dependencies": {
     "@types/node": "18.14.1",
     "@types/react": "18.0.28",
