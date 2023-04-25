@@ -3,6 +3,7 @@
 # Either get blog updated and converted to TS on it's own... (IE FORK and update)
     # Then introduce here?
     # https://vercel.com/templates?type=blog&framework=next.js&css=tailwind
+        # https://vercel.com/templates/next.js/blog-nextjs-sanity
 
 # Or use the simpler blog
 
