@@ -26,6 +26,7 @@ Make something like this?
 - Github actions
 - Static generation
 - Deploy to github pages
+- https://tyk.io/ or kong all in k8
 
 ### Next.js
 
