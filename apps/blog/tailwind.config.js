@@ -3,10 +3,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 const tailwindConfig = {
   ...require('ui/tailwind.config'),
-  content: [
-    './components/**/*.tsx', 
-    './pages/**/*.tsx'
-  ],
   theme: {
     extend: {
       colors: {
@@ -38,3 +34,5 @@ const tailwindConfig = {
     },
   },
 }
+
+module.exports = tailwindConfig;
