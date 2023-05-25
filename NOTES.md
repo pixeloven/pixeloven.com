@@ -1,11 +1,26 @@
 # Saas and support
 
-# Either get blog updated and converted to TS on it's own... (IE FORK and update)
-    # Then introduce here?
-    # https://vercel.com/templates?type=blog&framework=next.js&css=tailwind
-        # https://vercel.com/templates/next.js/blog-nextjs-sanity
+# Email workflow
+- https://www.joshwcomeau.com/react/wonderful-emails-with-mjml-and-mdx/
+- Next as server
+- mjml and react for templating 
+    - https://maizzle.com/ - start here instead
+    - can we make mjml work with maizzle
+    - remove headless react
+- graphql as a server? 
 
-# Or use the simpler blog
+- Also try MJML and Next.js without maizzle
+
+
+- https://www.youtube.com/watch?v=wiwAdrkNIRo
+
+- https://github.com/wix-incubator/mjml-react/issues/52
+- https://github.com/vercel/next.js/issues/7755#issuecomment-812805708
+
+# Component library
+- @headlessui/react
+- some other component library?
+# Native React support?
 
 ## Syntax (Docs)
 

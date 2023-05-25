@@ -34,3 +34,7 @@ yarn-error.log*
 
 # vscode
 .vscode
+
+# Email build
+build_production
+build_local
