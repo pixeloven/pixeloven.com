@@ -10,6 +10,7 @@
 - graphql as a server? 
 
 - Also try MJML and Next.js without maizzle
+- https://github.com/wix-incubator/mjml-react-example
 
 
 - https://www.youtube.com/watch?v=wiwAdrkNIRo
