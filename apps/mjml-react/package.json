@@ -1,5 +1,5 @@
 {
-  "name": "mjml-react-example",
+  "name": "mjml-react",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,25 +10,21 @@
     "start": "npm run build:watch & nodemon ./dist/server.js --watch ./dist",
     "generate": "node ./dist/cli.js"
   },
-  "author": {
-    "name": "Mantas Miliukas",
-    "email": "mantasm@wix.com"
-  },
   "homepage": "https://github.com/wix-incubator/mjml-react-example",
   "bugs": "https://github.com/wix-incubator/mjml-react-example/issues",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0"
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "@babel/preset-react": "^7.22.0"
   },
   "dependencies": {
-    "express": "^4.16.4",
-    "mjml": "^4.3.1",
-    "mjml-react": "^1.0.45",
-    "nodemon": "^1.18.9",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "express": "^4.18.2",
+    "mjml": "^4.14.1",
+    "mjml-react": "^2.0.8",
+    "nodemon": "^2.0.22",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }
