@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "mailing",
+    "dev": "mailing preview",
     "build": "mailing server build",
     "start": "mailing server start"
   },

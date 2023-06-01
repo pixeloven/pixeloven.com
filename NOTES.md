@@ -1,9 +1,6 @@
 # Saas and support
-
-
-## Email workflow
-    # Dev setup
-    # Simple API to render emails for an application preview
+ # White glove support
+ https://www.mailing.run/
 
 # Component library
 - @headlessui/react
@@ -49,14 +46,12 @@ Make something like this?
 - [] Can we make it so the blog and docs use the same markdown setup?
 
 ### CI/CD
-
-- Husky
-- Github actions
-- Static generation
-- Deploy to github pages
 - https://tyk.io/ or kong all in k8
 - Configure ESLINT
     - https://nextjs.org/docs/pages/building-your-application/configuring/eslint#additional-configurations
+- Configure Cypress
+    - 
+- https://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs/
 
 ### Next.js
 

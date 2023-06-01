@@ -4,6 +4,10 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "docs#build": {
+      "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"],
       "env": [
         "NEXT_PUBLIC_DOCSEARCH_APP_ID",
@@ -11,14 +15,22 @@
         "NEXT_PUBLIC_DOCSEARCH_INDEX_NAME"
       ]
     },
-    "test": {
-      "dependsOn": ["^build"]
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
+      "dependsOn": ["build"],
+      "outputs": [],
+      "persistent": true
     },
     "lint": {
       "outputs": []
     },
-    "dev": {
+    "e2e": {
       "cache": false,
+      "dependsOn": ["build"],
+      "outputs": [],
       "persistent": true
     }
   }
