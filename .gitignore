@@ -34,3 +34,9 @@ yarn-error.log*
 
 # vscode
 .vscode
+
+# Builds
+build
+build_production
+build_local
+dist

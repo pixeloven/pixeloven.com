@@ -1,11 +1,18 @@
 # Saas and support
 
-# Either get blog updated and converted to TS on it's own... (IE FORK and update)
-    # Then introduce here?
-    # https://vercel.com/templates?type=blog&framework=next.js&css=tailwind
-        # https://vercel.com/templates/next.js/blog-nextjs-sanity
 
-# Or use the simpler blog
+## Email workflow
+    # Dev setup
+    # Simple API to render emails for an application preview
+
+# Component library
+- @headlessui/react
+- some other component library?
+- ui (generic)
+    - ui-email
+    - ui-web
+    - ui-native
+# Native React support?
 
 ## Syntax (Docs)
 
@@ -48,6 +55,8 @@ Make something like this?
 - Static generation
 - Deploy to github pages
 - https://tyk.io/ or kong all in k8
+- Configure ESLINT
+    - https://nextjs.org/docs/pages/building-your-application/configuring/eslint#additional-configurations
 
 ### Next.js
 
