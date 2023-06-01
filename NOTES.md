@@ -1,8 +1,16 @@
 # Saas and support
 
+## Email workflow
+    # Dev setup
+    # Simple API to render emails for an application preview
+
 # Component library
 - @headlessui/react
 - some other component library?
+- ui (generic)
+    - ui-email
+    - ui-web
+    - ui-native
 # Native React support?
 
 ## Syntax (Docs)
