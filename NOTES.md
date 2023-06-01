@@ -100,3 +100,8 @@ To start keep the site focused on Kiln and our personal growth.
 
 ### Revenue
 - Blog ads that promote tooling. Ads should feel very purposeful. Perhaps even custom built Affiliate. Only on blog and only for products/services/apps I believe in.
+
+
+### Contribution doc
+- install node
+- npm install turbo --global

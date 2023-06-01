@@ -2,8 +2,6 @@
   "name": "emails",
   "version": "0.1.0",
   "private": true,
-  "main": "./index.tsx",
-  "types": "./index.tsx",
   "scripts": {
     "dev": "mailing",
     "build": "mailing server build",
