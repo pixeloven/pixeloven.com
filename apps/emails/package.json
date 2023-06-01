@@ -1,0 +1,14 @@
+{
+  "name": "emails",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "mailing-core": "^1.0.0",
+    "next": "^13.4.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "mailing": "^1.0.0"
+  }
+}

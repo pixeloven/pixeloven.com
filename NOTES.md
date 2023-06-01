@@ -1,23 +1,5 @@
 # Saas and support
 
-# Email workflow
-- https://www.joshwcomeau.com/react/wonderful-emails-with-mjml-and-mdx/
-- Next as server
-- mjml and react for templating 
-    - https://maizzle.com/ - start here instead
-    - can we make mjml work with maizzle
-    - remove headless react
-- graphql as a server? 
-
-- Also try MJML and Next.js without maizzle
-- https://github.com/wix-incubator/mjml-react-example
-
-
-- https://www.youtube.com/watch?v=wiwAdrkNIRo
-
-- https://github.com/wix-incubator/mjml-react/issues/52
-- https://github.com/vercel/next.js/issues/7755#issuecomment-812805708
-
 # Component library
 - @headlessui/react
 - some other component library?
