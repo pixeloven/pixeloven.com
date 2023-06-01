@@ -9,9 +9,14 @@ node_modules
 coverage
 
 # next.js
+.mailing
 .next/
 out/
 build
+dist
+
+# local env files
+.env*.local
 
 # misc
 .DS_Store
@@ -35,8 +40,7 @@ yarn-error.log*
 # vscode
 .vscode
 
-# Builds
-build
-build_production
-build_local
-dist
+# Cypress
+**/cypress/downloads
+**/cypress/videos
+**/cypress/screenshots
