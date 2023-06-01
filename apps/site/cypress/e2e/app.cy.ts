@@ -5,18 +5,21 @@
 
 // Cypress E2E Test
 describe('Navigation', () => {
-  it('should navigate to the about page', () => {
-    // Start from the index page
-    cy.visit('http://localhost:3000/')
-
-    // Find a link with an href attribute containing "about" and click it
-    cy.get('a[href*="about"]').click()
-
-    // The new url should include "/about"
-    cy.url().should('include', '/about')
-
-    // The new page should contain an h1 with "About page"
-    cy.get('h1').contains('About Page')
+  it('should navigate to the login page and back', () => {
+    cy.visit('/')
+    cy.get('a[href*="login"]').click()
+    cy.url().should('include', '/login')
+    cy.get('h2').contains('Sign in to your account')
+    cy.get('a[href*="/"]').first().click()
+    cy.url().should('include', '/')
+  })
+  it('should navigate to the register page and back', () => {
+    cy.visit('/')
+    cy.get('a[href*="register"]').first().click() // Consider running through each
+    cy.url().should('include', '/register')
+    cy.get('h2').contains('Get started for free')
+    cy.get('a[href*="/"]').first().click()
+    cy.url().should('include', '/')
   })
 })
 
