@@ -50,7 +50,9 @@ Make something like this?
 - Configure ESLINT
     - https://nextjs.org/docs/pages/building-your-application/configuring/eslint#additional-configurations
 - Configure Cypress
-    - 
+    - Code coverage metrics
+    - https://docs.cypress.io/guides/tooling/code-coverage
+    - https://nextjs.org/docs/pages/building-your-application/optimizing/testing
 - https://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs/
 
 ### Next.js
