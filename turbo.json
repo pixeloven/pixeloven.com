@@ -4,18 +4,22 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"],
+      "outputs": [".next/**", "!.next/cache/**"],
       "env": [
         "NEXT_PUBLIC_DOCSEARCH_APP_ID",
         "NEXT_PUBLIC_DOCSEARCH_API_KEY",
         "NEXT_PUBLIC_DOCSEARCH_INDEX_NAME"
       ]
     },
+    "test": {
+      "dependsOn": ["^build"]
+    },
     "lint": {
       "outputs": []
     },
     "dev": {
-      "cache": false
+      "cache": false,
+      "persistent": true
     }
   }
 }
