@@ -1,5 +1,6 @@
 # Saas and support
 
+
 ## Email workflow
     # Dev setup
     # Simple API to render emails for an application preview
@@ -54,6 +55,8 @@ Make something like this?
 - Static generation
 - Deploy to github pages
 - https://tyk.io/ or kong all in k8
+- Configure ESLINT
+    - https://nextjs.org/docs/pages/building-your-application/configuring/eslint#additional-configurations
 
 ### Next.js
 
