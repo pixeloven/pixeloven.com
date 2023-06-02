@@ -2,42 +2,39 @@
  # White glove support
  https://www.mailing.run/
 
-# Component library
+
+## Follow Ups
+
+### Component library
 - @headlessui/react
 - some other component library?
 - ui (generic)
     - ui-email
     - ui-web
     - ui-native
-# Native React support?
+### Native React support
 
-## Syntax (Docs)
-
-- Use MDX instead?
+### Syntax (Docs)
+- Convert doc site to typescript
+- Use MDX instead
+    - Unify Markdown approach for both docs and blog
+    - Explore Sanity for docs and blog instead?
+    - https://vercel.com/templates/next.js/blog-nextjs-sanity
 - Register docsearch https://docsearch.algolia.com/docs/what-is-docsearch/
 
-### Changelog
+### Create Changelog app
 
 https://vercel.com/templates/nuxt/logspot
 Make something like this?
 
-## Blog
-
-- https://vercel.com/templates/next.js/tailwind-css-starter-blog
-- https://vercel.com/templates/next.js/blog-starter-kit (simple)
-- https://github.com/web3templates/stablo (Leaning toward buying this one -- maybe see what else is out there that is similar)
-- Use mdx instead?
-
-## Follow Ups
-- [] Convert doc site to typescript
+### Other Items
 - [] Go through all deps on blog
 - [] Upgrade blog site an deps
 - [] Install sharp across each app
 - [] Merge all the font usage and assets
 - [] Merge apps by zone? 
 - [] Make them avalible offline?
-- [] Move blog api to it's own app?
-- [] Can all three apps (minus API) be static?
+- [] Can all three apps (minus APIs) be static?
 
 (See Advanced markdown blog for example)
 - [] Create new favicons for all device types???

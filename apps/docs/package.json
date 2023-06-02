@@ -6,7 +6,11 @@
     "dev": "next dev -p 3020",
     "build": "next build",
     "start": "next start -p 3020",
-    "lint": "next lint"
+    "lint": "next lint",
+    "e2e": "cypress open --e2e",
+    "e2e:headless": "cypress run --e2e",
+    "component": "cypress open --component",
+    "component:headless": "cypress run --component"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
