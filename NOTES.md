@@ -100,3 +100,4 @@ To start keep the site focused on Kiln and our personal growth.
 ### Contribution doc
 - install node
 - npm install turbo --global
+- brew install act (specify version) -- good for testing our CI

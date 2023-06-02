@@ -31,22 +31,13 @@ jobs:
         #   run: npm run lint
         - name: Lint
           run: npm run lint
+        - name: Component Testing
+          run: npm run component:headless
         - name: Build
           run: npm run build
-
-        - name: Start server in the background
-          run: npm start &
-
-        - name: Install Cypress and run tests
-          uses: cypress-io/github-action@v5
-          with:
-            working-directory: apps/blog
-
         # - name: Create Artifact
         #   uses: actions/upload-artifact@v3
         #   with:
         #     name: blog-artifact
         #     if-no-files-found: error
         #     path: apps/blog/.next
-# https://github.com/cypress-io/github-action/tree/v5/
-# https://docs.cypress.io/guides/continuous-integration/github-actions
