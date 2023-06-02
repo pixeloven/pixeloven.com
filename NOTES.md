@@ -53,6 +53,11 @@ Make something like this?
     - https://nextjs.org/docs/pages/building-your-application/optimizing/testing
 - https://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs/
 
+- https://www.thisdot.co/blog/utilizing-cypress-testing-in-a-multi-app-monorepo/
+    -- e2e tests be there own app
+    -- component remain in apps
+    -- package to manage cypress deps
+
 ### Next.js
 
 - Configure custom global 404/error handling

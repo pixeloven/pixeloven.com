@@ -26,6 +26,7 @@
     "eslint": "8.41.0",
     "eslint-config-custom": "*",
     "mailing": "^1.0.0",
+    "testing": "*",
     "tsconfig": "*",
     "typescript": "4.9.5"
   }

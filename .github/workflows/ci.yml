@@ -14,8 +14,8 @@ jobs:
       matrix:
         node: [ 16, 18 ]
     steps:
-      - name: Check out code
-        uses: actions/checkout@v3
+      # https://dev.to/drakulavich/aggressive-dependency-caching-in-github-actions-3c64
+      - uses: actions/checkout@v3
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
@@ -30,3 +30,17 @@ jobs:
         run: npm run lint
       - name: Build
         run: npm run build
+  test-site:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Cypress
+        uses: cypress-io/github-action@v5
+        with:
+          runTests: false
+      - name: Cypress Run
+        uses: cypress-io/github-action@v5
+        with:
+          install: false
+          project: apps/site
+          start: npm start
