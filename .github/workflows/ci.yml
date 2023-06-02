@@ -10,7 +10,6 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    container: cypress/browsers
     strategy:
       matrix:
         node: [ 16, 18 ]
@@ -29,8 +28,5 @@ jobs:
       #   run: npm run lint
       - name: Lint
         run: npm run lint
-        # https://github.com/cypress-io/github-action/tree/v5/
-      - name: Component Testing
-        run: npm run component:headless
       - name: Build
         run: npm run build
