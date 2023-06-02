@@ -27,6 +27,11 @@
     "lint": {
       "outputs": []
     },
+    "component": {
+      "cache": false,
+      "outputs": [],
+      "persistent": true
+    },
     "e2e": {
       "cache": false,
       "dependsOn": ["build"],

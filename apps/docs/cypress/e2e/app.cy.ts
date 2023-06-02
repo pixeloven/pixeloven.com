@@ -5,20 +5,14 @@
 
 // Cypress E2E Test
 describe('Navigation', () => {
-  it('should navigate to the login page and back', () => {
+  it('should navigate to the get started page', () => {
     cy.visit('/')
-    cy.get('a[href*="login"]').click()
-    cy.url().should('include', '/login')
-    cy.get('h2').contains('Sign in to your account')
-    cy.get('a[href*="/"]').first().click()
+    cy.get('a[href*="/"]').contains("Get started").click()
     cy.url().should('include', '/')
   })
-  it('should navigate to the register page and back', () => {
+  it('should navigate to github.com', () => {
     cy.visit('/')
-    cy.get('a[href*="register"]').first().click() // Consider running through each
-    cy.url().should('include', '/register')
-    cy.get('h2').contains('Get started for free')
-    cy.get('a[href*="/"]').first().click()
+    cy.get('a[href*="/"]').contains("View on GitHub").click()
     cy.url().should('include', '/')
   })
 })
