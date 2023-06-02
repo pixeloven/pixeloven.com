@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev",
+    "start": "turbo run start",
     "lint": "turbo run lint",
     "e2e": "turbo run e2e",
     "e2e:headless": "turbo run e2e:headless",
@@ -24,7 +25,7 @@
     "turbo": "latest"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "dependencies": {},
   "packageManager": "npm@8.19.3"
