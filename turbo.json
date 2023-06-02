@@ -32,7 +32,18 @@
       "outputs": [],
       "persistent": true
     },
+    "component:headless": {
+      "cache": false,
+      "outputs": [],
+      "persistent": true
+    },
     "e2e": {
+      "cache": false,
+      "dependsOn": ["build"],
+      "outputs": [],
+      "persistent": true
+    },
+    "e2e:headless": {
       "cache": false,
       "dependsOn": ["build"],
       "outputs": [],
