@@ -47,6 +47,7 @@ Make something like this?
 - Configure ESLINT
     - https://nextjs.org/docs/pages/building-your-application/configuring/eslint#additional-configurations
 - Configure Cypress
+    - snapshot testing
     - Code coverage metrics
     - https://docs.cypress.io/guides/tooling/code-coverage
     - https://nextjs.org/docs/pages/building-your-application/optimizing/testing

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3020",
     "build": "next build",
+    "prebuild": "cp .env.example .env.local",
     "start": "next start -p 3020",
     "lint": "next lint",
     "e2e": "cypress open --e2e",

@@ -1,9 +1,9 @@
-import RegisterPage from './register';
+import LoginPage from '../pages/login';
  
 describe('<LoginPage />', () => {
   it('should render and display expected content', () => {
-    cy.mount(<RegisterPage />);
-     cy.get('h2').contains('Get started for free');
+    cy.mount(<LoginPage />);
+     cy.get('h2').contains('Sign in to your account');
     cy.get('a[href="/"]').should('be.visible');
   });
 });
