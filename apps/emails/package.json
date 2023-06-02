@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "mailing",
+    "dev": "mailing preview",
     "build": "mailing server build",
-    "start": "mailing server start"
+    "start": "mailing server start",
+    "e2e": "cypress open --e2e",
+    "e2e:headless": "cypress run --e2e",
+    "component": "cypress open --component",
+    "component:headless": "cypress run --component"
   },
   "dependencies": {
     "mailing-core": "^1.0.0",
