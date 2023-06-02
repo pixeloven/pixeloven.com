@@ -38,9 +38,14 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           runTests: false
+      # https://glebbahmutov.com/blog/test-monorepo-apps/
+      # https://www.thisdot.co/blog/utilizing-cypress-testing-in-a-multi-app-monorepo/
       - name: Cypress Run
         uses: cypress-io/github-action@v5
         with:
           install: false
           project: apps/site
-          start: npm start
+          start: npm run dev
+
+# can we just cache node modules nad all build artifacts... download them all
+# run cypress from a container instead per app in their own jobs?
