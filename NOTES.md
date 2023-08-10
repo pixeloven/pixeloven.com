@@ -1,7 +1,7 @@
 # Saas and support
  # White glove support
  https://www.mailing.run/
-
+https://github.com/cerbos/nextjs-clerk-cerbos
 
 ## Follow Ups
 
@@ -58,9 +58,12 @@ Make something like this?
     -- component remain in apps
     -- package to manage cypress deps
 
-### Next.js
+### Next.js & Tech
 
 - Configure custom global 404/error handling
+- Swagger for apis and/or graphql
+- PM2 for K8?
+
 
 ### Tailwind
 
