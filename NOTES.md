@@ -1,7 +1,7 @@
 # Saas and support
  # White glove support
  https://www.mailing.run/
-
+https://github.com/cerbos/nextjs-clerk-cerbos
 
 ## Follow Ups
 
@@ -53,9 +53,17 @@ Make something like this?
     - https://nextjs.org/docs/pages/building-your-application/optimizing/testing
 - https://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs/
 
-### Next.js
+- https://www.thisdot.co/blog/utilizing-cypress-testing-in-a-multi-app-monorepo/
+    -- e2e tests be there own app
+    -- component remain in apps
+    -- package to manage cypress deps
+
+### Next.js & Tech
 
 - Configure custom global 404/error handling
+- Swagger for apis and/or graphql
+- PM2 for K8?
+
 
 ### Tailwind
 
