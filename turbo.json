@@ -4,13 +4,59 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "docs#build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": [
+        "NEXT_PUBLIC_DOCSEARCH_APP_ID",
+        "NEXT_PUBLIC_DOCSEARCH_API_KEY",
+        "NEXT_PUBLIC_DOCSEARCH_INDEX_NAME"
+      ]
+    },
+    "emails#build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        ".mailing/**", 
+        "!.mailing/.next/cache/**",
+        ".next/**", 
+        "!.next/cache/**"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
+      "dependsOn": ["build"],
+      "outputs": [],
+      "persistent": true
     },
     "lint": {
       "outputs": []
     },
-    "dev": {
-      "cache": false
+    "component": {
+      "cache": false,
+      "outputs": [],
+      "persistent": true
+    },
+    "component:headless": {
+      "cache": false,
+      "outputs": [],
+      "persistent": true
+    },
+    "e2e": {
+      "cache": false,
+      "dependsOn": ["build"],
+      "outputs": [],
+      "persistent": true
+    },
+    "e2e:headless": {
+      "cache": false,
+      "dependsOn": ["build"],
+      "outputs": [],
+      "persistent": true
     }
   }
 }
