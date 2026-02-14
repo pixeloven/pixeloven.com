@@ -1,3 +1,9 @@
+## apps/emails — Unmaintained Dependencies
+
+The `apps/emails` application uses `mailing` and `mailing-core` packages which are unmaintained. This app was not included in the Node 22+ dependency upgrade. It should be considered for removal or replacement with an actively maintained alternative such as `react-email`.
+
+---
+
 # Saas and support
  # White glove support
  https://www.mailing.run/

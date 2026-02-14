@@ -20,13 +20,13 @@
   },
   "devDependencies": {
     "eslint-config-custom": "*",
-    "prettier": "latest",
-    "prettier-plugin-tailwindcss": "^0.3.0",
-    "turbo": "latest"
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "turbo": "^2.4.4"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=22.0.0"
   },
   "dependencies": {},
-  "packageManager": "npm@8.19.3"
+  "packageManager": "npm@10.9.2"
 }

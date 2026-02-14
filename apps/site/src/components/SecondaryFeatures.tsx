@@ -1,6 +1,6 @@
 import { ReactNode, useId } from "react";
 import Image, { StaticImageData } from "next/image";
-import { Tab } from "@headlessui/react";
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import clsx from "clsx";
 
 import { Container } from "./Container";
@@ -13,7 +13,7 @@ interface Feature {
   summary: string;
   description: string;
   image: StaticImageData;
-  icon: Function;
+  icon: () => React.JSX.Element;
   isActive?: boolean;
 }
 
@@ -169,10 +169,10 @@ function FeaturesMobile() {
 
 function FeaturesDesktop() {
   return (
-    <Tab.Group as="div" className="hidden lg:mt-20 lg:block">
+    <TabGroup as="div" className="hidden lg:mt-20 lg:block">
       {({ selectedIndex }) => (
         <>
-          <Tab.List className="grid grid-cols-3 gap-x-8">
+          <TabList className="grid grid-cols-3 gap-x-8">
             {features.map((feature, featureIndex) => (
               <Feature
                 key={featureIndex}
@@ -189,11 +189,11 @@ function FeaturesDesktop() {
                 className="relative"
               />
             ))}
-          </Tab.List>
-          <Tab.Panels className="rounded-4xl relative mt-20 overflow-hidden bg-slate-200 px-14 py-16 xl:px-16">
+          </TabList>
+          <TabPanels className="rounded-4xl relative mt-20 overflow-hidden bg-slate-200 px-14 py-16 xl:px-16">
             <div className="-mx-5 flex">
               {features.map((feature, featureIndex) => (
-                <Tab.Panel
+                <TabPanel
                   static
                   key={featureIndex}
                   className={clsx(
@@ -211,14 +211,14 @@ function FeaturesDesktop() {
                       sizes="52.75rem"
                     />
                   </div>
-                </Tab.Panel>
+                </TabPanel>
               ))}
             </div>
             <div className="rounded-4xl pointer-events-none absolute inset-0 ring-1 ring-inset ring-slate-900/10" />
-          </Tab.Panels>
+          </TabPanels>
         </>
       )}
-    </Tab.Group>
+    </TabGroup>
   );
 }
 
