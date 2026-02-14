@@ -1,106 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unknown | PixelOven</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <style type="text/tailwindcss">
-body {
-	font-family: Helvetica, Arial, sans-serif;
-	@apply bg-black text-white;
-	font-size: 31.58px;
-}
-
-.logo {
-	height: 68px;
-	margin-bottom: 140px;
-}
-
-.title {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 69.49px;
-	color: #0fe7c7;
-	margin-bottom: 52px;
-}
-
-.logo.animate,
-.title.animate,
-.lead.animate {
-	@apply opacity-0 transition-all duration-1000;
-}
-
-.logo.fade-in,
-.title.fade-in,
-.lead.fade-in {
-	@apply opacity-100;
-}
-
-@media (max-width: 767px) {
-	body {
-		font-size: 17.11px;
-	}
-
-	.logo {
-		height: 40px;
-		margin-bottom: 100px;
-	}
-
-	.title {
-		font-size: 34.04px;
-		margin-bottom: 35px;
-	}
-
-	.lead {
-		/* margin-left: 120px; */
-        text-align: left;
-	}
-}
-    </style>
-</head>
-<body>
-
-    <div class="container mx-auto">
-        <div class="flex flex-col h-screen bg-center bg-cover bg-no-repeat">
-            <div class="grid place-items-start text-left md:place-items-center md:text-center w-full mx-auto p-10 my-20 my-auto space-y-5 cursor-pointer">
-                <svg class="logo animate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.8 25.73">
-                    <path d="M9.13,8.22h2v5.44a2.06,2.06,0,1,0,4.12,0V8.22h2v5.44a3.87,3.87,0,0,1-4.05,4.05,3.87,3.87,0,0,1-4-4.05Z" transform="translate(0 0)" style="fill: #0fe7c7" />
-                    <polygon points="20.21 8.22 22 8.22 26.51 13.99 26.51 8.22 28.5 8.22 28.5 17.51 26.71 17.51 22.2 11.74 22.2 17.51 20.21 17.51 20.21 8.22" style="fill: #0fe7c7" />
-                    <polygon points="31.55 8.22 33.54 8.22 33.54 12.2 37.13 8.22 39.51 8.22 36.06 12.07 39.78 17.51 37.46 17.51 34.74 13.53 33.54 14.79 33.54 17.51 31.55 17.51 31.55 8.22" style="fill: #0fe7c7" />
-                    <polygon points="41.5 8.22 43.29 8.22 47.8 13.99 47.8 8.22 49.79 8.22 49.79 17.51 48 17.51 43.49 11.74 43.49 17.51 41.5 17.51 41.5 8.22" style="fill: #0fe7c7" />
-                    <path d="M57.29,15.85a3,3,0,1,0-3-3,3,3,0,0,0,3,3m0-7.83a4.92,4.92,0,0,1,5,4.84,5,5,0,0,1-10.08,0,4.91,4.91,0,0,1,5-4.84" transform="translate(0 0)" style="fill: #0fe7c7" />
-                    <polygon
-                        points="63.52 8.22 65.58 8.22 67.5 14.46 67.57 14.46 69.49 8.22 71.35 8.22 73.28 14.46 73.34 14.46 75.27 8.22 77.32 8.22 74.27 17.51 72.35 17.51 70.46 11.47 70.38 11.47 68.5 17.51 66.57 17.51 63.52 8.22"
-                        style="fill: #0fe7c7"
-                    />
-                    <polygon points="79.37 8.22 81.17 8.22 85.68 13.99 85.68 8.22 87.67 8.22 87.67 17.51 85.88 17.51 81.36 11.74 81.36 17.51 79.37 17.51 79.37 8.22" style="fill: #0fe7c7" />
-                    <path d="M96.8,25.73H0V0H96.8ZM2.18,23.55H94.62V2.18H2.18Z" transform="translate(0 0)" style="fill: #0fe7c7" />
-                </svg>
-
-                <h1 class="title animate">
-                    PixelOven
-                </h1>
-
-                <p class="lead animate">We're not really sure what this is going to be but we know it will be pretty cool. </p>
-            </div>
-        </div>
-    </div>
+    <title>PixelOven | The Art of the Build</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        function setDelay(e, i) {
-            setTimeout(function () {
-                e.classList.add("fade-in")
-            }, i * 250)
-        }
-        // alternative to DOMContentLoaded
-        document.onreadystatechange = function () {
-            if (document.readyState == "interactive") {
-                var animEls = document.getElementsByClassName("animate")
-                for (var i = 0; i < animEls.length; i++) {
-                    setDelay(animEls[i], i)
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        oven: '#ff5722', 
+                    }
                 }
             }
         }
     </script>
+    <style type="text/css">
+        .theme-transition {
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+    </style>
+</head>
+<body class="theme-transition bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 min-h-screen">
+
+    <div class="absolute top-6 right-6">
+        <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 border-2 border-zinc-200 dark:border-zinc-800 hover:border-oven transition-colors rounded-lg text-xs font-bold uppercase tracking-widest">
+            <span class="dark:hidden text-zinc-600">🌙 Dark Mode</span>
+            <span class="hidden dark:inline text-zinc-400">☀️ Light Mode</span>
+        </button>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-6 py-20 lg:py-32">
+        <header class="mb-16 border-b-4 border-zinc-900 dark:border-zinc-100 pb-4">
+            <h1 class="text-5xl font-black uppercase tracking-tighter">PixelOven</h1>
+        </header>
+
+        <section class="mb-20 space-y-6">
+            <p class="text-2xl md:text-3xl font-medium leading-tight">
+                PixelOven is a brand dedicated to the <span class="text-oven">art of the build</span>. 
+            </p>
+            <p class="text-zinc-600 dark:text-zinc-400 text-lg">
+                Whether it’s architecting seamless containerized workflows for developers or exploring new frontiers in digital media, my goal is to create tools that feel like an extension of the creative process. 
+            </p>
+            <p class="text-zinc-600 dark:text-zinc-400 text-lg">
+                I believe that great engineering isn't just about efficiency; it's about empowering people to create something real, both on-screen and off.
+            </p>
+        </section>
+
+        <section class="mb-20">
+            <span class="text-xs uppercase tracking-[0.3em] text-oven font-bold mb-4 block">Collaboration</span>
+            <div class="bg-zinc-100 dark:bg-zinc-900 border-l-8 border-oven p-8 rounded-r-xl">
+                <h2 class="text-2xl font-bold mb-4">Leverage the Experience</h2>
+                <p class="text-zinc-600 dark:text-zinc-400 mb-6">
+                    With a background in software engineering and a focus on building scalable, developer-centric tools, I am open to consulting and partnership opportunities. 
+                </p>
+                <p class="text-zinc-600 dark:text-zinc-400 mb-8 text-sm italic">
+                    Focusing on containerization strategies, deployment pipelines, and bridging the gap between backend engineering and creative platforms.
+                </p>
+                
+                <a href="https://www.linkedin.com/company/pixeloven" target="_blank" class="inline-flex items-center gap-3 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-black px-8 py-4 font-bold hover:bg-oven dark:hover:bg-oven dark:hover:text-white transition-all uppercase text-sm tracking-widest rounded-md">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    Contact via LinkedIn
+                </a>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <span class="text-xs uppercase tracking-[0.3em] text-oven font-bold mb-6 block">Code & Creative</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="https://github.com/pixeloven" target="_blank" class="group p-6 border-2 border-zinc-200 dark:border-zinc-800 hover:border-oven transition-all rounded-xl">
+                    <h3 class="font-bold text-xl mb-1 group-hover:text-oven">GitHub</h3>
+                    <p class="text-zinc-500 text-sm">Open source tools & containers.</p>
+                </a>
+                <a href="https://www.briangebel.com/" target="_blank" class="group p-6 border-2 border-zinc-200 dark:border-zinc-800 hover:border-oven transition-all rounded-xl">
+                    <h3 class="font-bold text-xl mb-1 group-hover:text-oven">Development Log</h3>
+                    <p class="text-zinc-500 text-sm">Musings on engineering & art.</p>
+                </a>
+            </div>
+        </section>
+
+        <footer class="pt-10 border-t border-zinc-200 dark:border-zinc-800 flex flex-wrap gap-8 text-[10px] font-bold text-zinc-500 uppercase tracking-[0.2em]">
+            <span>&copy; 2026 PixelOven</span>
+            <a href="https://github.com/pixeloven" class="hover:text-oven transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/company/pixeloven" class="hover:text-oven transition-colors">LinkedIn</a>
+            <a href="https://www.briangebel.com/" class="hover:text-oven transition-colors">BrianGebel.com</a>
+        </footer>
+    </div>
 
 </body>
 </html>

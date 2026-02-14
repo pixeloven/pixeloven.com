@@ -2,8 +2,6 @@
 
 This is an official npm starter turborepo.
 
-[![Open in Codeflow](https://developer.stackblitz.com/img/open_in_codeflow.svg)](https:///pr.new/pixeloven/pixeloven.com)
-
 ## What's inside?
 
 This turborepo uses [npm](https://www.npmjs.com/) as a package manager. It includes the following packages/apps:
