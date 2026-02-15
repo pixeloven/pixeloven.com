@@ -1,0 +1,6 @@
+{
+  "typescript": true,
+  "emailsDir": "./src",
+  "outDir": "./previews_html",
+  "anonymousId": null
+}
