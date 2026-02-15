@@ -1,73 +1,63 @@
-# Turborepo starter
+# pixeloven.com
 
-This is an official npm starter turborepo.
+The personal site and blog for [PixelOven](https://www.pixeloven.com) — Product & Platform Engineering.
 
-## What's inside?
+## Tech Stack
 
-This turborepo uses [npm](https://www.npmjs.com/) as a package manager. It includes the following packages/apps:
+- [Astro](https://astro.build/) v5 — static site generator
+- [Tailwind CSS](https://tailwindcss.com/) v4 — utility-first styling via `@tailwindcss/vite`
+- [TypeScript](https://www.typescriptlang.org/) — strict mode
+- [pnpm](https://pnpm.io/) — package manager
 
-### Apps and Packages
+## Getting Started
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-npm run build
+```bash
+pnpm install
+pnpm dev
 ```
 
-### Develop
+Open [http://localhost:4321](http://localhost:4321) to view the site.
 
-To develop all apps and packages, run the following command:
+## Scripts
 
-```
-cd my-turborepo
-npm run dev
-```
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Start the dev server |
+| `pnpm build` | Build for production to `dist/` |
+| `pnpm preview` | Preview the production build locally |
 
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+## Project Structure
 
 ```
-cd my-turborepo
-npx turbo login
+src/
+  components/    # Astro components (Header, Footer, Navigation, etc.)
+  content/
+    blog/        # Markdown blog posts
+  layouts/       # Base HTML layout
+  pages/         # File-based routing (/, /blog/, /blog/[id]/)
+  styles/        # Global CSS with Tailwind v4 theme
+  utils/         # Utility functions
+public/          # Static assets (CNAME, favicon)
+development/     # Archived monorepo files
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+## Blog
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
+Blog posts are Markdown files in `src/content/blog/`. Each post requires frontmatter:
 
+```yaml
+---
+title: "Post Title"
+date: 2026-02-15
+summary: "Optional excerpt"
+draft: false
+---
 ```
-npx turbo link
-```
 
-## Useful Links
+## Deployment
 
-Learn more about the power of Turborepo:
+The site deploys to GitHub Pages automatically on push to `main` via the workflow in `.github/workflows/deploy.yml`. The repo's Pages source must be set to **GitHub Actions** (not "Deploy from a branch").
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+## License
+
+See [LICENSE](./LICENSE).
