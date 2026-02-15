@@ -1,0 +1,30 @@
+---
+const pathname = Astro.url.pathname;
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/blog/', label: 'Blog' },
+];
+
+function isActive(href: string, current: string): boolean {
+  if (href === '/') return current === '/';
+  return current.startsWith(href);
+}
+---
+
+<nav class="mb-12 flex gap-6 text-[10px] font-bold uppercase tracking-[0.2em]">
+  {links.map(({ href, label }) => (
+    <a
+      href={href}
+      class:list={[
+        'transition-colors',
+        isActive(href, pathname)
+          ? 'text-oven'
+          : 'text-zinc-500 hover:text-oven',
+      ]}
+      aria-current={isActive(href, pathname) ? 'page' : undefined}
+    >
+      {label}
+    </a>
+  ))}
+</nav>

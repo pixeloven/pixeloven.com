@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-oven: #ff5722;
+}
+
+@utility theme-transition {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+@utility font-mono-tight {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: -0.05em;
+}
