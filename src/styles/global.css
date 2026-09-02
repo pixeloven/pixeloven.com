@@ -7,7 +7,7 @@
  * workspace root with no build output. The copy is pinned to a tag and CI diffs
  * it against upstream, so drift fails the build rather than accumulating.
  *
- * Pinned: pixeloven/design @ tokens-v0.1.0
+ * Pinned: pixeloven/design @ tokens-v0.2.0
  * Do not edit src/styles/vendor/tokens.css by hand.
  */
 @import "./vendor/tokens.css";

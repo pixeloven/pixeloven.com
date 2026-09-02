@@ -16,7 +16,7 @@ on:
 # and the diff shows up in review.
 
 env:
-  PINNED_TAG: tokens-v0.1.0
+  PINNED_TAG: tokens-v0.2.0
 
 jobs:
   drift:
