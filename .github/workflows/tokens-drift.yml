@@ -1,0 +1,51 @@
+name: tokens drift
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# src/styles/vendor/tokens.css is a COPY of the design system's build output.
+# Vendoring is deliberate — @pixeloven/tokens lives in a monorepo subdirectory
+# and npm/pnpm git dependencies resolve a repo root, not a subpath — but a copy
+# with nothing watching it is exactly how the palette fragmented in the first
+# place.
+#
+# So this job rebuilds the tokens from the pinned tag and fails if the vendored
+# file differs. Upgrading is then a deliberate act: bump PINNED_TAG, re-copy,
+# and the diff shows up in review.
+
+env:
+  PINNED_TAG: tokens-v0.2.0
+
+jobs:
+  drift:
+    name: vendored tokens match the pinned release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check out the design system at the pinned tag
+        uses: actions/checkout@v4
+        with:
+          repository: pixeloven/design
+          ref: ${{ env.PINNED_TAG }}
+          path: .design
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Rebuild tokens from source
+        working-directory: .design/packages/tokens
+        run: node src/build.mjs
+
+      - name: Compare against the vendored copy
+        run: |
+          if ! diff -u .design/packages/tokens/dist/tokens.css src/styles/vendor/tokens.css; then
+            echo ""
+            echo "::error::src/styles/vendor/tokens.css has drifted from pixeloven/design@${PINNED_TAG}."
+            echo "Re-copy it, or bump PINNED_TAG in this workflow if the upgrade is intended."
+            exit 1
+          fi
+          echo "vendored tokens.css matches ${PINNED_TAG}"

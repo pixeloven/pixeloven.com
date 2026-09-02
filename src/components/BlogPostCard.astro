@@ -16,9 +16,9 @@ const formattedDate = date.toLocaleDateString('en-US', {
 ---
 
 <article>
-  <a href={url} class="group block p-6 border-2 border-zinc-200 dark:border-zinc-800 hover:border-oven transition-all rounded-xl">
-    <time class="text-[10px] font-bold text-oven uppercase tracking-[0.2em] block mb-2">{formattedDate}</time>
-    <h2 class="text-xl font-black uppercase italic tracking-tighter group-hover:text-oven transition-colors mb-3">{title}</h2>
-    <p class="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed">{excerpt}</p>
+  <a href={url} class="group block p-6 border-2 border-line hover:border-accent transition-all rounded-xl">
+    <time class="text-[10px] font-bold text-accent uppercase tracking-[0.2em] block mb-2">{formattedDate}</time>
+    <h2 class="text-xl font-black uppercase italic tracking-tighter group-hover:text-accent transition-colors mb-3">{title}</h2>
+    <p class="text-fg-dim text-sm leading-relaxed">{excerpt}</p>
   </a>
 </article>

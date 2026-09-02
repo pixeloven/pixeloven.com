@@ -5,11 +5,11 @@
   <button
     id="theme-toggle"
     type="button"
-    class="px-3 py-2 border-2 border-zinc-200 dark:border-zinc-800 hover:border-oven transition-colors rounded-lg text-[10px] font-black uppercase tracking-widest bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md"
+    class="px-3 py-2 border-2 border-line hover:border-accent transition-colors rounded-lg text-[10px] font-black uppercase tracking-widest bg-surface/80 backdrop-blur-md text-fg-secondary"
     aria-label="Toggle theme"
   >
-    <span class="dark:hidden text-zinc-600">&#127769; Dark</span>
-    <span class="hidden dark:inline text-zinc-400">&#9728;&#65039; Light</span>
+    <span class="dark:hidden">&#127769; Dark</span>
+    <span class="hidden dark:inline">&#9728;&#65039; Light</span>
   </button>
 </div>
 
@@ -19,8 +19,18 @@
     if (!btn) return;
 
     btn.addEventListener('click', () => {
-      const isDark = document.documentElement.classList.toggle('dark');
-      sessionStorage.setItem('theme', isDark ? 'dark' : 'light');
+      // BaseLayout always sets an explicit data-theme before paint, so this
+      // reads a real value rather than having to re-resolve the OS preference.
+      const next =
+        document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try {
+        localStorage.setItem('theme', next);
+      } catch (e) {
+        // Blocked storage: the toggle still works for this page view, it just
+        // will not be remembered. Failing silently is correct here — a theme
+        // preference is not worth an error state.
+      }
     });
   }
 

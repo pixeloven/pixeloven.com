@@ -18,16 +18,37 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="color-scheme" content="dark light" />
     <script is:inline>
-      const theme = sessionStorage.getItem('theme');
-      if (theme === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
-      }
+      // Resolve the scheme to an EXPLICIT data-theme before first paint.
+      //
+      // Two reasons it must be explicit rather than left to the OS. The tokens
+      // and Tailwind's `dark:` variant both key off this attribute, so leaving
+      // it unset would let them disagree — tokens would follow
+      // prefers-color-scheme while the variant would not match. And resolving
+      // here, inline and before the body renders, is what prevents the
+      // flash of the wrong theme.
+      //
+      // localStorage, not sessionStorage: a theme preference that is forgotten
+      // when the tab closes is not a preference.
+      (function () {
+        var stored = null;
+        try {
+          stored = localStorage.getItem('theme');
+        } catch (e) {
+          /* private mode, blocked storage — fall through to the OS */
+        }
+        var theme =
+          stored === 'light' || stored === 'dark'
+            ? stored
+            : window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
     </script>
   </head>
-  <body class="theme-transition bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 min-h-screen font-sans">
+  <body class="theme-transition bg-void text-fg min-h-screen font-sans">
     <div class="max-w-4xl mx-auto px-6 pt-8">
       <Navigation />
     </div>
