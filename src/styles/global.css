@@ -1,10 +1,65 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@variant dark (&:where(.dark, .dark *));
+/* The design system. VENDORED, not imported from a package: @pixeloven/tokens
+ * lives in a monorepo subdirectory, and npm/pnpm git dependencies resolve a repo
+ * root rather than a subpath — so a git install would fetch the private
+ * workspace root with no build output. The copy is pinned to a tag and CI diffs
+ * it against upstream, so drift fails the build rather than accumulating.
+ *
+ * Pinned: pixeloven/design @ tokens-v0.1.0
+ * Do not edit src/styles/vendor/tokens.css by hand.
+ */
+@import "./vendor/tokens.css";
+
+/* Colour comes from tokens, which already resolve per scheme in CSS — so a
+ * `dark:` colour variant is never needed and none survives in the markup.
+ * The variant is kept only for the handful of NON-colour cases (the toggle
+ * swapping its own label), and is keyed to the same attribute the tokens use so
+ * the two can never disagree.
+ *
+ * BaseLayout resolves the scheme to an explicit data-theme before first paint,
+ * so this attribute is always present.
+ */
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
-  --color-oven: #ff5722;
+  /* Surfaces */
+  --color-void: var(--pxo-surface-void);
+  --color-canvas: var(--pxo-surface-canvas);
+  --color-bg: var(--pxo-surface-bg);
+  --color-surface: var(--pxo-surface);
+  --color-surface-hover: var(--pxo-surface-hover);
+  --color-raised: var(--pxo-surface-raised);
+
+  /* Lines. Named `line-*` rather than `border-*` so `border-line` reads
+   * correctly as a Tailwind utility instead of `border-border`. */
+  --color-line-muted: var(--pxo-border-muted);
+  --color-line: var(--pxo-border);
+  --color-line-strong: var(--pxo-border-strong);
+  --color-line-accent: var(--pxo-border-accent);
+
+  /* Foreground */
+  --color-fg: var(--pxo-text);
+  --color-fg-bright: var(--pxo-text-bright);
+  --color-fg-secondary: var(--pxo-text-secondary);
+  --color-fg-dim: var(--pxo-text-dim);
+  --color-on-accent: var(--pxo-text-on-accent);
+
+  /* Brand. `accent` replaces the retired `oven` orange — one value across both
+   * schemes, so it needs no variant. */
+  --color-accent: var(--pxo-accent);
+  --color-accent-deep: var(--pxo-accent-deep);
+  --color-accent-soft: var(--pxo-accent-soft);
+
+  /* Semantic */
+  --color-ok: var(--pxo-status-success);
+  --color-warn: var(--pxo-status-warning);
+  --color-danger: var(--pxo-status-danger);
+
+  /* Type */
+  --font-sans: var(--pxo-font-sans);
+  --font-mono: var(--pxo-font-mono);
 }
 
 @utility theme-transition {
@@ -12,6 +67,32 @@
 }
 
 @utility font-mono-tight {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-family: var(--pxo-font-mono);
   letter-spacing: -0.05em;
+}
+
+/* Typography plugin, driven from tokens.
+ *
+ * Replaces `prose-zinc dark:prose-invert`. That pairing needs the dark variant
+ * to stay in sync with the tokens by hand; pointing the plugin's own variables
+ * at the tokens means prose follows the scheme for the same reason everything
+ * else does, with nothing to keep in sync.
+ */
+.prose {
+  --tw-prose-body: var(--pxo-text-secondary);
+  --tw-prose-headings: var(--pxo-text);
+  --tw-prose-lead: var(--pxo-text-secondary);
+  --tw-prose-links: var(--pxo-accent);
+  --tw-prose-bold: var(--pxo-text);
+  --tw-prose-counters: var(--pxo-text-dim);
+  --tw-prose-bullets: var(--pxo-text-dim);
+  --tw-prose-hr: var(--pxo-border-muted);
+  --tw-prose-quotes: var(--pxo-text);
+  --tw-prose-quote-borders: var(--pxo-border);
+  --tw-prose-captions: var(--pxo-text-dim);
+  --tw-prose-code: var(--pxo-accent-soft);
+  --tw-prose-pre-code: var(--pxo-text);
+  --tw-prose-pre-bg: var(--pxo-surface-canvas);
+  --tw-prose-th-borders: var(--pxo-border);
+  --tw-prose-td-borders: var(--pxo-border-muted);
 }

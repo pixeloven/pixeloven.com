@@ -19,8 +19,8 @@ function isActive(href: string, current: string): boolean {
       class:list={[
         'transition-colors',
         isActive(href, pathname)
-          ? 'text-oven'
-          : 'text-zinc-500 hover:text-oven',
+          ? 'text-accent'
+          : 'text-fg-dim hover:text-accent',
       ]}
       aria-current={isActive(href, pathname) ? 'page' : undefined}
     >

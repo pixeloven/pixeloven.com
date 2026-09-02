@@ -1,0 +1,181 @@
+/* PixelOven design tokens — piWebDark.
+ * GENERATED from packages/tokens/src/tokens.json. Do not edit.
+ * Consumers without a bundler vendor this file at a pinned version.
+ */
+
+/* Default scheme (dark). A page with no theme wiring gets this. */
+:root {
+
+  /* surface */
+  --pxo-surface-void: #04060a; /* the page ground; nothing sits behind it */
+  --pxo-surface-canvas: #090b15; /* terminal and code grounds */
+  --pxo-surface-bg: #0d101e; /* default app background */
+  --pxo-surface: #111526; /* cards, panels, the default raised plane */
+  --pxo-surface-hover: #151b32; /* hover state of a surface */
+  --pxo-surface-raised: #1a213d; /* popovers, menus, anything above a surface */
+
+  /* border */
+  --pxo-border-muted: #1f2949; /* hairlines inside a surface */
+  --pxo-border: #263158; /* the default border */
+  --pxo-border-strong: #2e3c6c; /* emphasis, focus rings on neutral elements */
+  --pxo-border-accent: #384983; /* border on an accented element */
+
+  /* text */
+  --pxo-text-bright: #ffffff; /* maximum emphasis; use sparingly */
+  --pxo-text: #f7f4ff; /* body text */
+  --pxo-text-secondary: #aaa4bd; /* supporting text, labels */
+  --pxo-text-dim: #9089ab; /* de-emphasised text; still AA on surface */
+  --pxo-text-on-accent: #ffffff; /* text on an accent fill — white in BOTH schemes, unlike text.bright */
+
+  /* accent */
+  --pxo-accent: #7c3cff; /* primary actions, brand emphasis */
+  --pxo-accent-deep: #6a2ce0; /* active and pressed states — a FILL, never a foreground */
+  --pxo-accent-soft: #b7a2ff; /* accent text against the ground; the muted brand tone */
+
+  /* status */
+  --pxo-status-success: #00f0d8; /* healthy, complete, passing */
+  --pxo-status-warning: #ffb000; /* degraded, needs attention */
+  --pxo-status-danger: #ff4f7b; /* failed, destructive */
+
+  /* status-surface */
+  --pxo-status-surface-success: #092d31; /* success callout ground */
+  --pxo-status-surface-success-muted: #071e22; /* subtler success ground */
+  --pxo-status-surface-warning: #16140d; /* warning callout ground */
+  --pxo-status-surface-danger: #1e0d16; /* danger callout ground */
+  --pxo-status-surface-accent: #181026; /* accent callout ground */
+
+  /* font */
+  --pxo-font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; /* the brand voice — code, labels, data, eyebrows */
+  --pxo-font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif; /* prose and UI copy */
+}
+
+/* Follow the OS, unless an explicit dark choice overrides it. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+
+    /* surface */
+    --pxo-surface-void: #fbfbfc;
+    --pxo-surface-canvas: #f7f7f8;
+    --pxo-surface-bg: #f3f3f5;
+    --pxo-surface: #eeeef1;
+    --pxo-surface-hover: #e6e7eb;
+    --pxo-surface-raised: #dedfe5;
+
+    /* border */
+    --pxo-border-muted: #d3d5dd;
+    --pxo-border: #c5c9d4;
+    --pxo-border-strong: #b3b8c9;
+    --pxo-border-accent: #9ea5be;
+
+    /* text */
+    --pxo-text-bright: #0a0c12;
+    --pxo-text: #0c0e15;
+    --pxo-text-secondary: #474b57;
+    --pxo-text-dim: #5b5f6f;
+    --pxo-text-on-accent: #ffffff;
+
+    /* accent */
+    --pxo-accent: #7c3cff;
+    --pxo-accent-deep: #6a2ce0;
+    --pxo-accent-soft: #735cc1;
+
+    /* status */
+    --pxo-status-success: #007a6e;
+    --pxo-status-warning: #916400;
+    --pxo-status-danger: #da0036;
+
+    /* status-surface */
+    --pxo-status-surface-success: #e7f8f6;
+    --pxo-status-surface-success-muted: #f1fbfa;
+    --pxo-status-surface-warning: #f8f3e7;
+    --pxo-status-surface-danger: #f8e7eb;
+    --pxo-status-surface-accent: #ede7f8;
+  }
+}
+
+/* An explicit toggle wins in both directions. */
+:root[data-theme="light"] {
+
+  /* surface */
+  --pxo-surface-void: #fbfbfc;
+  --pxo-surface-canvas: #f7f7f8;
+  --pxo-surface-bg: #f3f3f5;
+  --pxo-surface: #eeeef1;
+  --pxo-surface-hover: #e6e7eb;
+  --pxo-surface-raised: #dedfe5;
+
+  /* border */
+  --pxo-border-muted: #d3d5dd;
+  --pxo-border: #c5c9d4;
+  --pxo-border-strong: #b3b8c9;
+  --pxo-border-accent: #9ea5be;
+
+  /* text */
+  --pxo-text-bright: #0a0c12;
+  --pxo-text: #0c0e15;
+  --pxo-text-secondary: #474b57;
+  --pxo-text-dim: #5b5f6f;
+  --pxo-text-on-accent: #ffffff;
+
+  /* accent */
+  --pxo-accent: #7c3cff;
+  --pxo-accent-deep: #6a2ce0;
+  --pxo-accent-soft: #735cc1;
+
+  /* status */
+  --pxo-status-success: #007a6e;
+  --pxo-status-warning: #916400;
+  --pxo-status-danger: #da0036;
+
+  /* status-surface */
+  --pxo-status-surface-success: #e7f8f6;
+  --pxo-status-surface-success-muted: #f1fbfa;
+  --pxo-status-surface-warning: #f8f3e7;
+  --pxo-status-surface-danger: #f8e7eb;
+  --pxo-status-surface-accent: #ede7f8;
+}
+
+:root[data-theme="dark"] {
+
+  /* surface */
+  --pxo-surface-void: #04060a; /* the page ground; nothing sits behind it */
+  --pxo-surface-canvas: #090b15; /* terminal and code grounds */
+  --pxo-surface-bg: #0d101e; /* default app background */
+  --pxo-surface: #111526; /* cards, panels, the default raised plane */
+  --pxo-surface-hover: #151b32; /* hover state of a surface */
+  --pxo-surface-raised: #1a213d; /* popovers, menus, anything above a surface */
+
+  /* border */
+  --pxo-border-muted: #1f2949; /* hairlines inside a surface */
+  --pxo-border: #263158; /* the default border */
+  --pxo-border-strong: #2e3c6c; /* emphasis, focus rings on neutral elements */
+  --pxo-border-accent: #384983; /* border on an accented element */
+
+  /* text */
+  --pxo-text-bright: #ffffff; /* maximum emphasis; use sparingly */
+  --pxo-text: #f7f4ff; /* body text */
+  --pxo-text-secondary: #aaa4bd; /* supporting text, labels */
+  --pxo-text-dim: #9089ab; /* de-emphasised text; still AA on surface */
+  --pxo-text-on-accent: #ffffff; /* text on an accent fill — white in BOTH schemes, unlike text.bright */
+
+  /* accent */
+  --pxo-accent: #7c3cff; /* primary actions, brand emphasis */
+  --pxo-accent-deep: #6a2ce0; /* active and pressed states — a FILL, never a foreground */
+  --pxo-accent-soft: #b7a2ff; /* accent text against the ground; the muted brand tone */
+
+  /* status */
+  --pxo-status-success: #00f0d8; /* healthy, complete, passing */
+  --pxo-status-warning: #ffb000; /* degraded, needs attention */
+  --pxo-status-danger: #ff4f7b; /* failed, destructive */
+
+  /* status-surface */
+  --pxo-status-surface-success: #092d31; /* success callout ground */
+  --pxo-status-surface-success-muted: #071e22; /* subtler success ground */
+  --pxo-status-surface-warning: #16140d; /* warning callout ground */
+  --pxo-status-surface-danger: #1e0d16; /* danger callout ground */
+  --pxo-status-surface-accent: #181026; /* accent callout ground */
+
+  /* font */
+  --pxo-font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; /* the brand voice — code, labels, data, eyebrows */
+  --pxo-font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif; /* prose and UI copy */
+}

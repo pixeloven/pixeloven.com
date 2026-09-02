@@ -23,10 +23,10 @@ const posts = allPosts.sort(
     <Header />
 
     <section>
-      <span class="text-xs uppercase tracking-[0.3em] text-oven font-bold mb-8 block">Blog</span>
+      <span class="text-xs uppercase tracking-[0.3em] text-accent font-bold mb-8 block">Blog</span>
 
       {posts.length === 0 ? (
-        <p class="text-zinc-500 dark:text-zinc-400 text-lg">No posts yet. Check back soon.</p>
+        <p class="text-fg-dim text-lg">No posts yet. Check back soon.</p>
       ) : (
         <div class="space-y-6">
           {posts.map((post) => (
